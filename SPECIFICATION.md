@@ -192,6 +192,16 @@ Un fichier JSON par thématique. Structure du dépôt :
 > **Limite à assumer :** si l'apprenant change de téléphone, il perd sa progression. Acceptable en v1. Prévoir un bouton « Exporter ma progression » plus tard.
 
 ### 1.5 Critère d'acquisition
+
+```
+etat = "solide"  SI ET SEULEMENT SI :
+    nombre de portes_reussies distinctes >= 3
+ET  situation_inedite_ok == true
+ET  contre_exemple_ok == true          // sauf si nature = "fait_arbitraire"
+ET  nombre de moments_espaces >= 2
+ET  intervalle entre 2 moments >= 24 heures
+```
+
 > **💬 PROMPT — Coder le moteur d'état**
 >
 > ```
