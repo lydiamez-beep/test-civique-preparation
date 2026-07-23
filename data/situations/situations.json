@@ -1,0 +1,17 @@
+[
+  {
+    "id": "SIT_MAIRIE_01",
+    "titre": "La mairie finance-t-elle la construction d'un lieu de culte ?",
+    "lieu": "mairie",
+    "acteurs": ["maire", "association_religieuse"],
+
+    "recit": [
+      "Une association veut construire un lieu de culte.",
+      "Elle demande de l'argent à la mairie.",
+      "Le maire doit répondre."
+    ],
+
+    "image": "/images/situations/mairie-facade.jpg",
+    "charge_affective": "haute"
+  }
+]

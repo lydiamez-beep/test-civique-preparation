@@ -1,0 +1,15 @@
+[
+  {
+    "id": "ANGLE_MAIRIE_01_LAICITE",
+    "situation": "SIT_MAIRIE_01",
+    "notion": "LAICITE_01",
+    "role": "application",
+
+    "question": "Le maire peut-il donner cet argent ?",
+    "reponse_correcte": "Non",
+    "reponse_incorrecte": "Oui",
+
+    "explication_courte": "L'argent public ne finance pas la construction d'un lieu de culte.",
+    "feedback_erreur": "Beaucoup pensent que la mairie peut aider une association religieuse comme les autres. En réalité, l'argent public ne construit pas de lieu de culte — mais il peut restaurer un monument classé."
+  }
+]
