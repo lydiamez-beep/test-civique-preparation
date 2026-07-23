@@ -69,6 +69,7 @@ Un fichier JSON par thématique. Structure du dépôt :
   "id": "LAICITE_01",
   "thematique": "valeurs",
   "nature": "concept_a_frontieres",
+  "nom_affiche": "la laïcité",
 
   "pourquoi_ca_existe": "Pour que l'État traite tout le monde de la même façon, quelle que soit sa religion.",
 
@@ -130,6 +131,7 @@ Un fichier JSON par thématique. Structure du dépôt :
 
 | Champ | Règle |
 |---|---|
+| `nom_affiche` | Obligatoire. Le nom du concept tel qu'il apparaît à l'écran de révélation (section 7.3). Avec article, en minuscules, accentué. L'écran le met en majuscules lui-même. |
 | `pourquoi_ca_existe` | Obligatoire, non vide. Doit donner la **fonction**, pas reformuler la définition. |
 | `frequence_estimee` | Usage interne uniquement. JAMAIS affichée à l'apprenant en v1. Sert au moteur (priorisation, routage). Le champ `frequence_affichee` prend une valeur qualitative : eleve, moyen, faible. |
 | `cadrage_factuel` | Obligatoire si `charge_affective = "haute"` |

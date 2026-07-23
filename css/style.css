@@ -1,0 +1,434 @@
+/* ==========================================================================
+   Feuille de style unique du site — HTML/CSS/JS natifs, aucune dépendance.
+   Conçue mobile d'abord (section 10 de SPECIFICATION.md).
+   Ton visuel calme et sobre : public adulte, souvent anxieux.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Variables globales : couleurs sémantiques et échelle de base.
+   Les couleurs ci-dessous sont les seules couleurs porteuses de sens
+   dans tout le site (section 7 du prompt) :
+   - vert  = acquis
+   - ambre = en cours
+   - gris  = à venir
+   - rouge = UNIQUEMENT une erreur factuelle, jamais un échec de l'apprenant
+   -------------------------------------------------------------------------- */
+:root {
+  /* Texte et fond : contraste vérifié WCAG AA (ratio > 7:1) */
+  --couleur-texte: #1a1a1a;
+  --couleur-texte-attenue: #4b5259;
+  --couleur-fond: #ffffff;
+  --couleur-fond-discret: #f4f5f6;
+
+  /* Couleurs sémantiques (voir note ci-dessus) — teintes assombries
+     pour rester lisibles en texte sur fond blanc (WCAG AA) */
+  --couleur-acquis: #256029;
+  --couleur-en-cours: #8a5a00;
+  --couleur-a-venir: #5f6670;
+  --couleur-erreur: #a1281f;
+
+  /* Boutons neutres (options de réponse) : sobres, sans dégradé */
+  --couleur-bouton-fond: #ffffff;
+  --couleur-bouton-bordure: #4b5259;
+  --couleur-bouton-fond-actif: #eef0f2;
+
+  /* Emplacement d'image en attente de la vraie image */
+  --couleur-image-fond: #d9dbde;
+  --couleur-image-texte: #3c4046;
+
+  /* Rythme et espacement : beaucoup d'espace blanc, jamais chargé */
+  --espace-xs: 0.5rem;
+  --espace-s: 1rem;
+  --espace-m: 1.5rem;
+  --espace-l: 2.5rem;
+
+  /* Typographie : 18px minimum sur mobile (règle V4, section 6) */
+  --taille-texte-base: 18px;
+  --taille-texte-cadre: 15px;
+  --taille-texte-question: 20px;
+
+  font-size: var(--taille-texte-base);
+}
+
+/* --------------------------------------------------------------------------
+   Réinitialisation minimale et base du document.
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* ==========================================================================
+   Écran de micro-jeu — gabarit unique (section 7.2)
+   Une seule colonne, jamais de grille complexe.
+   ========================================================================== */
+
+/* Conteneur de l'écran : une colonne verticale, beaucoup d'air entre
+   les blocs, aucune structure en grille. */
+.ecran-microjeu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-m);
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: var(--espace-s) var(--espace-s) var(--espace-l);
+  min-height: 100vh;
+}
+
+/* --------------------------------------------------------------------------
+   Bouton "← Quitter"
+   Discret, en haut de l'écran, jamais mis en avant.
+   -------------------------------------------------------------------------- */
+.detective-bouton-quitter {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  padding: var(--espace-xs) 0;
+  color: var(--couleur-texte-attenue);
+  font-size: 1rem;
+  cursor: pointer;
+  min-height: 48px;
+}
+
+.detective-bouton-quitter:hover,
+.detective-bouton-quitter:focus-visible {
+  color: var(--couleur-texte);
+}
+
+/* --------------------------------------------------------------------------
+   Cadre situationnel ("À la mairie")
+   Jamais l'étiquette conceptuelle — voir section 2.1.
+   -------------------------------------------------------------------------- */
+.detective-cadre-situationnel {
+  margin: 0;
+  font-size: var(--taille-texte-cadre);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--couleur-texte-attenue);
+}
+
+/* --------------------------------------------------------------------------
+   Emplacement d'image
+   Rectangle gris avec texte centré, en attendant la vraie image (V1).
+   -------------------------------------------------------------------------- */
+.detective-emplacement-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  background-color: var(--couleur-image-fond);
+  border-radius: 4px;
+  color: var(--couleur-image-texte);
+  font-size: 1rem;
+  text-align: center;
+  padding: var(--espace-s);
+}
+
+/* --------------------------------------------------------------------------
+   Récit de la situation
+   Phrases courtes, une idée par phrase (règle V2).
+   -------------------------------------------------------------------------- */
+.detective-situation-concrete {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-xs);
+}
+
+.detective-phrase-situation {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Question posée à l'apprenant.
+   -------------------------------------------------------------------------- */
+.detective-question {
+  margin: 0;
+  font-size: var(--taille-texte-question);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   Liste des options de réponse
+   Une seule colonne, boutons pleine largeur (section 7.2).
+   -------------------------------------------------------------------------- */
+.detective-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-xs);
+}
+
+/* Chaque bouton d'option : zone tactile confortable (>= 48px),
+   pleine largeur, sobre — pas de dégradé ni d'ombre lourde. */
+.detective-option {
+  width: 100%;
+  min-height: 48px;
+  padding: var(--espace-xs) var(--espace-s);
+  background-color: var(--couleur-bouton-fond);
+  border: 2px solid var(--couleur-bouton-bordure);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.detective-option:hover,
+.detective-option:focus-visible {
+  background-color: var(--couleur-bouton-fond-actif);
+}
+
+.detective-option:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+/* --------------------------------------------------------------------------
+   Bouton "Je ne comprends pas la question"
+   Visuellement distinct des options : plus discret, jamais un bouton
+   d'option de plus (section 5.1).
+   -------------------------------------------------------------------------- */
+.detective-bouton-incomprehension {
+  width: 100%;
+  min-height: 48px;
+  padding: var(--espace-xs) var(--espace-s);
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--couleur-bouton-fond-actif);
+  color: var(--couleur-texte-attenue);
+  font-size: 0.95rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.detective-bouton-incomprehension:hover,
+.detective-bouton-incomprehension:focus-visible {
+  color: var(--couleur-texte);
+}
+
+/* --------------------------------------------------------------------------
+   Message "Personne ne connaît encore la réponse. C'est normal."
+   Rassurant, sobre, jamais encourageant à outrance (section 5.4).
+   -------------------------------------------------------------------------- */
+.detective-message-avant-reponse {
+  margin: 0;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--couleur-texte-attenue);
+  text-align: center;
+}
+
+/* Masque le message une fois la réponse donnée (ajouté par detective.js). */
+.detective-cachee {
+  display: none;
+}
+
+/* ==========================================================================
+   Écran de cadrage factuel
+   Affiché avant tout quand la charge affective est haute (règle R5,
+   section 4.1) : on annonce ce que dit la loi, pas une opinion. Ton neutre
+   et posé, aucune couleur sémantique (ce n'est ni un acquis, ni une erreur).
+   ========================================================================== */
+
+.ecran-cadrage {
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+}
+
+.cadrage-texte {
+  margin: 0;
+  padding: var(--espace-m);
+  background-color: var(--couleur-fond-discret);
+  border-left: 4px solid var(--couleur-texte-attenue);
+  border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--couleur-texte);
+  text-align: left;
+}
+
+.cadrage-bouton-continuer {
+  width: 100%;
+  min-height: 48px;
+  padding: var(--espace-xs) var(--espace-s);
+  background-color: var(--couleur-bouton-fond);
+  border: 2px solid var(--couleur-bouton-bordure);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cadrage-bouton-continuer:hover,
+.cadrage-bouton-continuer:focus-visible {
+  background-color: var(--couleur-bouton-fond-actif);
+}
+
+/* ==========================================================================
+   Écran de retour après réponse
+   explication_courte ou feedback_erreur (section 1.4) : un texte neutre,
+   jamais coloré en fonction de la réussite (section 5.4 — pas de
+   "Faux, c'est B", pas de ton condescendant ni de couleur d'échec).
+   ========================================================================== */
+
+.ecran-retour {
+  justify-content: center;
+}
+
+.retour-texte {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--couleur-texte);
+}
+
+.retour-bouton-continuer {
+  width: 100%;
+  min-height: 48px;
+  padding: var(--espace-xs) var(--espace-s);
+  background-color: var(--couleur-bouton-fond);
+  border: 2px solid var(--couleur-bouton-bordure);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.retour-bouton-continuer:hover,
+.retour-bouton-continuer:focus-visible {
+  background-color: var(--couleur-bouton-fond-actif);
+}
+
+/* ==========================================================================
+   Écran de révélation (boucle 2, section 7.3)
+   Ordre strict : pourquoi → nom → définition simple → définition officielle.
+   ========================================================================== */
+
+/* Hérite entièrement de .ecran-microjeu : écran le plus long, il reste
+   aligné en haut, sans centrage ni alignement particulier. */
+.ecran-revelation {
+  text-align: left;
+}
+
+.revelation-titre {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--couleur-texte);
+}
+
+.revelation-pourquoi {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--couleur-texte);
+}
+
+/* Simple ligne fine et discrète entre les blocs — jamais un ornement. */
+.revelation-separateur {
+  width: 100%;
+  height: 0;
+  margin: 0;
+  border: none;
+  border-top: 1px solid var(--couleur-image-fond);
+}
+
+/* Moment de nomination (principe 4, section 0) : c'est ici que le mot
+   apparaît. Le nom doit être visuellement le plus fort de l'écran — par
+   la taille et la graisse, jamais par la couleur ni un effet décoratif. */
+.revelation-nomination {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--couleur-texte-attenue);
+  text-align: center;
+}
+
+.revelation-nomination strong {
+  display: block;
+  margin-top: var(--espace-xs);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--couleur-texte);
+}
+
+.revelation-label {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--couleur-texte-attenue);
+}
+
+.revelation-definition-simple {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--couleur-texte);
+}
+
+/* Affichée à côté de la version simple, jamais à la place (section 7.3) :
+   l'italique et la teinte atténuée la marquent comme complémentaire. */
+.revelation-definition-officielle {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: var(--couleur-texte-attenue);
+}
+
+.revelation-bouton-terminer {
+  width: 100%;
+  min-height: 48px;
+  padding: var(--espace-xs) var(--espace-s);
+  background-color: var(--couleur-bouton-fond);
+  border: 2px solid var(--couleur-bouton-bordure);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.revelation-bouton-terminer:hover,
+.revelation-bouton-terminer:focus-visible {
+  background-color: var(--couleur-bouton-fond-actif);
+}
+
+/* --------------------------------------------------------------------------
+   Confort de lecture sur écrans plus larges.
+   Mobile reste la référence : ce bloc ne fait qu'ajouter de la
+   marge, il ne réorganise rien.
+   -------------------------------------------------------------------------- */
+@media (min-width: 600px) {
+  .ecran-microjeu {
+    padding-top: var(--espace-l);
+  }
+}

@@ -7,7 +7,233 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Test civique préparation</h1>
-  <script src="js/app.js"></script>
+  <!-- Conteneur vide : chaque écran (cadrage, détective, retour, révélation) le remplit tour à tour. -->
+  <div id="conteneur-ecrans"></div>
+
+  <script src="js/donnees.js"></script>
+  <script src="js/etat.js"></script>
+  <script src="js/moteur.js"></script>
+  <script src="js/jeux/detective.js"></script>
+
+  <script>
+    // Script principal — assemble le prototype sur la seule notion LAICITE_01
+    // (sections 2.1, 5.1 et 7.3 de SPECIFICATION.md, étape « Prototype sur 1 notion », section 9).
+    // N'invente aucun contenu pédagogique : tout provient des fichiers JSON de /data.
+
+    /**
+     * Construit un séparateur visuel entre deux blocs de l'écran de révélation.
+     * @returns {HTMLElement}
+     */
+    function creerSeparateurRevelation() {
+      const separateur = document.createElement("hr");
+      separateur.className = "revelation-separateur";
+      return separateur;
+    }
+
+    /**
+     * Affiche l'écran de cadrage factuel, obligatoire avant tout quand la charge affective
+     * de la situation est haute (règle R5, section 4.1 ; règle de validation, section 1.3).
+     * @param {Object} notion
+     * @param {HTMLElement} conteneur
+     * @param {Function} auContinuer - Appelée quand l'apprenant clique sur "Continuer".
+     */
+    function afficherCadrage(notion, conteneur, auContinuer) {
+      conteneur.textContent = "";
+      conteneur.className = "ecran-microjeu ecran-cadrage";
+
+      const texte = document.createElement("p");
+      texte.className = "cadrage-texte";
+      texte.textContent = notion.cadrage_factuel;
+      conteneur.appendChild(texte);
+
+      const bouton = document.createElement("button");
+      bouton.type = "button";
+      bouton.className = "cadrage-bouton-continuer";
+      bouton.textContent = "Continuer";
+      bouton.addEventListener("click", auContinuer);
+      conteneur.appendChild(bouton);
+    }
+
+    /**
+     * Affiche, sur l'écran du Détective déjà construit, la formulation simplifiée demandée
+     * via "Je ne comprends pas la question" (section 5.1). N'est jamais un échec : n'affecte
+     * ni l'état ni l'espacement, seulement incomprehensions (géré par enregistrerIncomprehension).
+     * @param {Object} notion
+     * @param {HTMLElement} conteneur
+     */
+    function afficherFormulationSimplifiee(notion, conteneur) {
+      if (conteneur.querySelector(".detective-formulation-simplifiee")) {
+        return; // déjà affichée : un second clic ne la duplique pas
+      }
+
+      const question = conteneur.querySelector(".detective-question");
+      const formulation = document.createElement("p");
+      formulation.className = "detective-formulation-simplifiee";
+      formulation.textContent = notion.formulation_simplifiee;
+      question.insertAdjacentElement("afterend", formulation);
+    }
+
+    /**
+     * Affiche le retour après réponse (explication_courte ou feedback_erreur, section 1.4),
+     * avec un bouton "Continuer" qui mène à l'écran de révélation.
+     * @param {Object} notion
+     * @param {Object} angle
+     * @param {boolean} reussite
+     * @param {HTMLElement} conteneur
+     */
+    function afficherRetour(notion, angle, reussite, conteneur) {
+      const texte = retourApresReponse(angle, reussite);
+      if (!texte) {
+        console.error("Impossible d'afficher le retour : le texte attendu est manquant dans l'angle.");
+        return;
+      }
+
+      conteneur.textContent = "";
+      conteneur.className = "ecran-microjeu ecran-retour";
+
+      const paragraphe = document.createElement("p");
+      paragraphe.className = "retour-texte";
+      paragraphe.textContent = texte;
+      conteneur.appendChild(paragraphe);
+
+      const bouton = document.createElement("button");
+      bouton.type = "button";
+      bouton.className = "retour-bouton-continuer";
+      bouton.textContent = "Continuer";
+      bouton.addEventListener("click", () => afficherRevelation(notion, conteneur));
+      conteneur.appendChild(bouton);
+    }
+
+    /**
+     * Affiche l'écran de révélation (boucle 2), dans l'ordre STRICT et non négociable
+     * de la section 7.3 : pourquoi → nom → définition simple → définition officielle.
+     * C'est ici, et seulement ici, que le nom de la notion apparaît.
+     * @param {Object} notion
+     * @param {HTMLElement} conteneur
+     */
+    function afficherRevelation(notion, conteneur) {
+      conteneur.textContent = "";
+      conteneur.className = "ecran-microjeu ecran-revelation";
+
+      // 1er — la fonction, jamais la définition (règle du champ pivot, section 1.2)
+      const titrePourquoi = document.createElement("p");
+      titrePourquoi.className = "revelation-titre";
+      titrePourquoi.textContent = "Pourquoi cette règle existe ?";
+      conteneur.appendChild(titrePourquoi);
+
+      const textePourquoi = document.createElement("p");
+      textePourquoi.className = "revelation-pourquoi";
+      textePourquoi.textContent = notion.pourquoi_ca_existe;
+      conteneur.appendChild(textePourquoi);
+
+      conteneur.appendChild(creerSeparateurRevelation());
+
+      // 2e — nomination explicite : le mot apparaît ici, jamais avant (principe 4, section 0)
+      const nomination = document.createElement("p");
+      nomination.className = "revelation-nomination";
+      nomination.textContent = "Ce principe s'appelle ";
+      // notion.nom_affiche est accentué et en minuscules (section 1.2) : la majuscule est
+      // purement visuelle, appliquée par CSS (.revelation-nomination strong), pour ne
+      // jamais perdre les accents.
+      const nom = document.createElement("strong");
+      nom.textContent = notion.nom_affiche;
+      nomination.appendChild(nom);
+      conteneur.appendChild(nomination);
+
+      conteneur.appendChild(creerSeparateurRevelation());
+
+      // 3e — définition simple
+      const labelSimple = document.createElement("p");
+      labelSimple.className = "revelation-label";
+      labelSimple.textContent = "En français simple :";
+      conteneur.appendChild(labelSimple);
+
+      const defSimple = document.createElement("p");
+      defSimple.className = "revelation-definition-simple";
+      defSimple.textContent = notion.definition_simple;
+      conteneur.appendChild(defSimple);
+
+      // 4e — définition officielle, affichée à côté, jamais à la place
+      const labelOfficielle = document.createElement("p");
+      labelOfficielle.className = "revelation-label";
+      labelOfficielle.textContent = "Dans le texte officiel :";
+      conteneur.appendChild(labelOfficielle);
+
+      const defOfficielle = document.createElement("p");
+      defOfficielle.className = "revelation-definition-officielle";
+      defOfficielle.textContent = notion.definition_officielle;
+      conteneur.appendChild(defOfficielle);
+
+      // Bouton de fin du prototype (une seule notion : pas d'écran de clôture complet ici)
+      const bouton = document.createElement("button");
+      bouton.type = "button";
+      bouton.className = "revelation-bouton-terminer";
+      bouton.textContent = "Terminer";
+      bouton.addEventListener("click", () => {
+        conteneur.textContent = "";
+        conteneur.className = "";
+      });
+      conteneur.appendChild(bouton);
+    }
+
+    /**
+     * Fabrique l'item et affiche le micro-jeu Détective (boucle 1 — ancrage).
+     * @param {Object} notion
+     * @param {Object} situation
+     * @param {Object} angle
+     * @param {HTMLElement} conteneur
+     */
+    function demarrerDetective(notion, situation, angle, conteneur) {
+      const item = fabriquerItem(angle, situation, "detective");
+      if (!item) {
+        console.error("Impossible de fabriquer l'item : voir les détails ci-dessus.");
+        return;
+      }
+
+      afficherDetective(notion, item, conteneur, {
+        onReponse: (porte, reussite, tempsEnMs) => {
+          // temps_reponse_moyen (section 1.6) est exprimé en secondes.
+          enregistrerReponse(notion.id, porte, reussite, tempsEnMs / 1000);
+          afficherRetour(notion, angle, reussite, conteneur);
+        },
+        onIncomprehension: () => {
+          enregistrerIncomprehension(notion.id);
+          afficherFormulationSimplifiee(notion, conteneur);
+        },
+      });
+    }
+
+    /**
+     * Point d'entrée : charge les données, sélectionne le trio du prototype
+     * (LAICITE_01 / SIT_MAIRIE_01 / ANGLE_MAIRIE_01_LAICITE) et démarre l'écran adapté.
+     */
+    async function demarrerPrototype() {
+      const conteneur = document.getElementById("conteneur-ecrans");
+
+      // 1. Chargement des données (aucun contenu écrit en dur)
+      const notions = await chargerNotions("01-valeurs.json");
+      const situations = await chargerSituations();
+      const angles = await chargerAngles();
+
+      // 2. Sélection du trio fixe du prototype (section 9 : une seule notion à la fois)
+      const notion = trouverNotion(notions, "LAICITE_01");
+      const situation = situations.find((s) => s.id === "SIT_MAIRIE_01");
+      const angle = angles.find((a) => a.id === "ANGLE_MAIRIE_01_LAICITE");
+
+      if (!notion || !situation || !angle) {
+        console.error("Données introuvables pour le prototype LAICITE_01 / SIT_MAIRIE_01 / ANGLE_MAIRIE_01_LAICITE.");
+        return;
+      }
+
+      // 3. Cadrage factuel avant tout si la situation a une charge affective haute (R5, section 4.1)
+      if (situation.charge_affective === "haute") {
+        afficherCadrage(notion, conteneur, () => demarrerDetective(notion, situation, angle, conteneur));
+      } else {
+        demarrerDetective(notion, situation, angle, conteneur);
+      }
+    }
+
+    demarrerPrototype();
+  </script>
 </body>
 </html>
