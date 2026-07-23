@@ -75,5 +75,82 @@
       "situation": "/images/situations/mairie-guichet.jpg",
       "lieu": "/images/lieux/mairie-facade.jpg"
     }
+  },
+  {
+    "id": "AGENT_USAGER_01",
+    "thematique": "valeurs",
+    "nature": "norme",
+    "nom_affiche": "la neutralité des agents publics",
+    "pourquoi_ca_existe": "Pour que tous les usagers soient traités de la même façon.",
+    "definition_simple": "L'agent qui travaille dans un service public reste neutre. L'usager reste libre.",
+    "definition_officielle": "Les personnes qui travaillent dans les services publics doivent rester neutres et ne pas montrer leurs opinions ou croyances personnelles pendant leur travail.",
+    "lexique": ["agent public", "usager", "service public", "neutralité"],
+    "portes_entree": ["situation", "image", "contraste", "mot_declencheur", "lieu"],
+    "erreurs_typiques": [
+      { "texte": "Dans une mairie, personne ne peut porter de signe religieux", "frequence_estimee": 0.8, "frequence_affichee": "eleve" },
+      { "texte": "Un usager doit retirer ses signes religieux pour entrer", "frequence_estimee": 0.6, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "LAICITE_01", "frontiere": "La laïcité est le principe général. La neutralité des agents en est une application au travail." }
+    ],
+    "contre_exemples": [
+      "Une femme voilée vient retirer un acte de naissance",
+      "Un infirmier porte une croix invisible sous sa blouse"
+    ],
+    "cas_limites": [
+      "Une usagère refuse d'ôter son voile intégral pour une vérification d'identité",
+      "Un bénévole d'association intervient dans une école publique"
+    ],
+    "scenarios": ["mairie", "hopital", "ecole"],
+    "ancrage_spatial": ["guichet_service_public"],
+    "parcours_narratifs": { "principal": "P_MAIRIE", "secondaires": ["P_ECOLE", "P_HOPITAL"] },
+    "prerequis": ["LAICITE_01"],
+    "formulations_examen": [
+      "Un agent de mairie peut-il porter un signe religieux au travail ?",
+      "Une personne voilée peut-elle entrer dans une mairie ?",
+      "Qui doit être neutre dans un service public : l'agent ou l'usager ?",
+      "Une infirmière d'hôpital public peut-elle porter une croix visible ?",
+      "Un usager peut-il exiger d'être reçu par un agent de sa religion ?",
+      "Peut-on exiger une adaptation du service public au nom de sa religion ?",
+      "Un usager doit-il respecter les règles de fonctionnement du service ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "L'agent qui travaille ne montre pas sa religion. La personne qui vient reste libre.",
+    "charge_affective": "haute",
+    "cadrage_factuel": "Voici ce que dit la loi française. Chacun garde ses convictions personnelles.",
+    "images": { "situation": "/images/situations/mairie-guichet.jpg", "lieu": "/images/lieux/mairie-facade.jpg" }
+  },
+  {
+    "id": "DEVISE_01",
+    "thematique": "valeurs",
+    "nature": "fait_arbitraire",
+    "nom_affiche": "la devise de la République",
+    "pourquoi_ca_existe": "Pour donner aux Français des repères communs pour vivre ensemble.",
+    "definition_simple": "La devise de la France est : Liberté, Égalité, Fraternité.",
+    "definition_officielle": "La devise de la France « liberté, égalité, fraternité » consacre les valeurs fondatrices de la République française, repères communs pour le vivre ensemble.",
+    "lexique": ["devise", "fronton"],
+    "portes_entree": ["image", "lieu", "mot_declencheur", "definition"],
+    "erreurs_typiques": [
+      { "texte": "Liberté, Égalité, Solidarité", "frequence_estimee": 0.4, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [],
+    "contre_exemples": [],
+    "cas_limites": [],
+    "scenarios": ["mairie", "ecole"],
+    "ancrage_spatial": ["fronton_mairie"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Quelle est la devise de la France ?",
+      "Où peut-on lire la devise de la France ?",
+      "Sur quels bâtiments la devise est-elle inscrite ?",
+      "Complétez : « Liberté, Égalité, … »",
+      "Vous voyez trois mots gravés sur le fronton d'une mairie. Lesquels ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Les trois mots de la France sont : Liberté, Égalité, Fraternité.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/fronton-mairie.jpg", "lieu": "/images/lieux/mairie-facade.jpg" }
   }
 ]

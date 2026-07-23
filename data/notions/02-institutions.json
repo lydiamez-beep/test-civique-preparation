@@ -1,1 +1,45 @@
-[]
+[
+  {
+    "id": "DROIT_VOTE_01",
+    "thematique": "institutions",
+    "nature": "norme",
+    "nom_affiche": "le droit de vote",
+    "pourquoi_ca_existe": "Pour que le peuple choisisse lui-même ceux qui le gouvernent.",
+    "definition_simple": "En France, on vote à partir de 18 ans.",
+    "definition_officielle": "Tous les citoyens, hommes et femmes, ayant au moins 18 ans et disposant de leurs droits civils et politiques, ont le droit de voter et de se présenter aux élections dans les conditions fixées par la loi.",
+    "lexique": ["suffrage", "majorité civile", "droits civils et politiques", "élection"],
+    "portes_entree": ["situation", "image", "lieu", "mot_declencheur", "definition"],
+    "erreurs_typiques": [
+      { "texte": "Toute personne qui vit en France peut voter", "frequence_estimee": 0.7, "frequence_affichee": "eleve" },
+      { "texte": "On peut voter à partir de 16 ans", "frequence_estimee": 0.3, "frequence_affichee": "faible" }
+    ],
+    "notions_voisines": [
+      { "id": "SUFFRAGE_UNIVERSEL_01", "frontiere": "Le droit de vote dit qui peut voter. Le suffrage universel dit comment on vote." }
+    ],
+    "contre_exemples": [
+      "Une personne de 17 ans qui travaille et paie des impôts",
+      "Une personne majeure privée de ses droits civiques par décision de justice"
+    ],
+    "cas_limites": [
+      "Un citoyen européen vote aux élections municipales mais pas aux législatives",
+      "Une personne majeure sous tutelle"
+    ],
+    "scenarios": ["bureau_de_vote", "mairie"],
+    "ancrage_spatial": ["isoloir", "urne"],
+    "parcours_narratifs": { "principal": "P_VOTE", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "À quel âge peut-on voter en France ?",
+      "Quelles conditions faut-il remplir pour voter ?",
+      "Qu'est-ce que la majorité civile ?",
+      "Les femmes ont-elles le droit de vote en France ?",
+      "Peut-on se présenter à une élection ?",
+      "Qu'est-ce qui peut empêcher une personne majeure de voter ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "En France, on vote quand on a 18 ans.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/bureau-vote.jpg", "lieu": "/images/lieux/isoloir.jpg" }
+  }
+]

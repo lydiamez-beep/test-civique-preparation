@@ -179,15 +179,20 @@ Exemple :
 }
 ```
 
-**Le champ `role`** indique ce que la situation permet de faire avec la notion :
-
-| Valeur | Sens | Boucle visée |
-|---|---|---|
-| `application` | La situation est un cas typique de la notion | 1, 4 |
-| `illustration` | La situation rend la notion visible sans la tester | 2 |
-| `discrimination` | La situation oblige à distinguer deux notions voisines | 3 |
-
 **Aucun poids numérique.** Le routage se fait sur `role`, qui est vérifiable. Un poids serait une estimation déguisée en donnée mesurée — voir la règle appliquée à `frequence_estimee` en section 1.2.
+
+**Fonction de la situation selon la nature du savoir**
+
+Une situation ne joue pas le même rôle selon ce qu'elle sert. Elle n'a pas besoin de contenir un conflit ou un dilemme pour être valide.
+
+| Nature du savoir | Fonction de la situation |
+|---|---|
+| `fait_arbitraire` | Fournir un indice de récupération. Un ancrage contextuel suffit. |
+| `norme` | Poser un cas où une règle s'applique ou non. |
+| `concept_a_frontieres` | Poser un cas où la frontière est en jeu. |
+| `systeme_relationnel` | Rendre visible une relation entre acteurs. |
+
+**Règle de suffisance :** une situation est assez longue quand elle active la porte d'entrée visée, et pas plus. Aucune longueur minimale n'est imposée. Une situation de deux phrases peut être complète ; une situation de six phrases peut être inutilement chargée.
 
 **Règles de validation :**
 
@@ -232,6 +237,15 @@ Exemple :
 }
 ```
 
+**Le champ `role`** indique ce que la situation permet de faire avec la notion :
+
+| Valeur | Sens | Boucle visée |
+|---|---|---|
+| `ancrage` | La situation fournit un contexte de récupération, sans jugement à porter | 1, 5 |
+| `application` | La situation est un cas typique de la notion | 1, 4 |
+| `illustration` | La situation rend la notion visible sans la tester | 2 |
+| `discrimination` | La situation oblige à distinguer deux notions voisines | 3 |
+
 **Les deux retours ne font pas le même travail :**
 
 | Champ | Répond à | Affiché quand |
@@ -255,8 +269,8 @@ Cette règle est vérifiable automatiquement : les termes interdits se déduisen
 |---|---|
 | `situation` | Doit référencer une situation existante |
 | `notion` | Doit référencer une notion existante |
-| `role` | `application`, `illustration` ou `discrimination` |
-| `question` | Porte sur la situation, jamais sur la définition. Interdit : « Qu'est-ce que X ? » |
+| `role` | `ancrage`, `application`, `illustration` ou `discrimination` |
+| `question` | Porte sur la situation, jamais sur la définition. Interdit : « Qu'est-ce que X ? » Pour `role: ancrage`, la question demande de récupérer une information à partir du contexte. |
 | `reponse_correcte` | Un verdict, pas un principe |
 | `explication_courte` | Soumise à L5 |
 | `feedback_erreur` | Soumise à L5 |
