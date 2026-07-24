@@ -773,7 +773,12 @@ Les 5 thématiques restent **visibles** — elles rassurent et correspondent au 
 - Maximum 4 options
 - « Je ne sais pas » toujours présent, non pénalisant
 - « Je ne comprends pas la question » visible sans scroll
-- Aucun score, compteur ou chronomètre
+- Un compteur de position est autorisé et affiché en haut : « Question N sur M »
+- Aucun score, aucun compteur de performance, aucun chronomètre
+
+> **Compteur de position, pas de performance**
+> « Question 2 sur 4 » dit où l'apprenant se trouve dans la session. C'est un repère temporel, qui répond à la peur de perdre son temps (section 5.3).
+> « 1 bonne réponse sur 2 » jugerait une performance. Cela reste interdit en phase d'apprentissage (section 5.6). Le score n'existe qu'en simulation.
 
 ### 7.3 Écran de révélation (boucle 2)
 

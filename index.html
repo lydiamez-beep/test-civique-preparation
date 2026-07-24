@@ -221,7 +221,7 @@
           enregistrerIncomprehension(notion.id);
           afficherFormulationSimplifiee(notion, conteneur);
         },
-      });
+      }, { numero: indexItemCourant + 1, total: session.length });
     }
 
     /**

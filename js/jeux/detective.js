@@ -1,7 +1,7 @@
 // Micro-jeu "Détective" — boucle 1 (ancrage), sections 2.1, 3, 7.2 de SPECIFICATION.md
 // Ne fait que construire l'écran dans le DOM : aucune logique de routage, d'état ou de score ici.
 //
-// afficherDetective(notion, item, conteneur, callbacks) attend un objet "item" fourni par
+// afficherDetective(notion, item, conteneur, callbacks, position) attend un objet "item" fourni par
 // l'appelant (moteur), car la situation concrète et les options de réponse ne font pas partie
 // du modèle Notion (section 1.2) : { situation: Array<string>, question?: string,
 // options: Array<{texte: string, correcte: boolean}> }
@@ -43,6 +43,20 @@ function creerBoutonQuitter(callbacks) {
     }
   });
   return bouton;
+}
+
+/**
+ * Construit le compteur de position affiché en haut de l'écran (section 7.2).
+ * Repère temporel uniquement ("Question N sur M") : jamais un score ni une performance
+ * (sections 5.6 et 7.2).
+ * @param {{numero: number, total: number}} position
+ * @returns {HTMLElement}
+ */
+function creerCompteurPosition(position) {
+  const compteur = document.createElement("p");
+  compteur.className = "detective-compteur-position";
+  compteur.textContent = `Question ${position.numero} sur ${position.total}`;
+  return compteur;
 }
 
 /**
@@ -162,8 +176,9 @@ function creerMessageAvantReponse() {
 /**
  * Affiche l'écran du micro-jeu "Détective" (boucle 1 — ancrage) dans le conteneur fourni.
  * Respecte EXACTEMENT le gabarit de la section 7.2 et les interdits de la section 10 :
- * aucun nom de notion, aucun score ni compteur ni chronomètre visible, aucun champ de
- * saisie libre, aucun encouragement automatique, aucun badge ni barre de progression.
+ * aucun nom de notion, aucun score ni chronomètre visible (seul un compteur de position
+ * est autorisé), aucun champ de saisie libre, aucun encouragement automatique, aucun
+ * badge ni barre de progression.
  *
  * @param {Object} notion - La notion au format de la section 1.2.
  * @param {Object} item - Le contenu concret de cet exercice, fourni par l'appelant :
@@ -171,8 +186,10 @@ function creerMessageAvantReponse() {
  *   (situation et options ne font pas partie du modèle Notion, section 1.2).
  * @param {HTMLElement} conteneur - L'élément DOM dans lequel construire l'écran.
  * @param {Object} callbacks - { onReponse(porte, reussite, temps), onIncomprehension() }
+ * @param {{numero: number, total: number}} position - Position de cet item dans la session
+ *   (compteur affiché "Question N sur M", section 7.2) : jamais un score ni une performance.
  */
-function afficherDetective(notion, item, conteneur, callbacks) {
+function afficherDetective(notion, item, conteneur, callbacks, position) {
   window.scrollTo(0, 0);
 
   // Horodatage de départ pour mesurer le temps de réponse — jamais affiché (section 10).
@@ -186,6 +203,7 @@ function afficherDetective(notion, item, conteneur, callbacks) {
   conteneur.className = "ecran-microjeu detective";
 
   conteneur.appendChild(creerBoutonQuitter(callbacks));
+  conteneur.appendChild(creerCompteurPosition(position));
   conteneur.appendChild(creerCadreSituationnel(notion.scenarios[0]));
   conteneur.appendChild(creerEmplacementImage());
   conteneur.appendChild(creerSituationConcrete(item.situation));

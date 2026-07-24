@@ -44,7 +44,7 @@
 
   /* Typographie : 18px minimum sur mobile (règle V4, section 6) */
   --taille-texte-base: 18px;
-  --taille-texte-cadre: 15px;
+  --taille-texte-cadre: 16px;
   --taille-texte-question: 20px;
 
   font-size: var(--taille-texte-base);
@@ -115,6 +115,18 @@ button {
 .detective-bouton-quitter:hover,
 .detective-bouton-quitter:focus-visible {
   color: var(--couleur-texte);
+}
+
+/* --------------------------------------------------------------------------
+   Compteur de position ("Question 2 sur 4")
+   Repère discret, pas un score : plus petit et plus atténué que le cadre
+   situationnel, ne doit jamais attirer l'œil avant l'image et la question.
+   -------------------------------------------------------------------------- */
+.detective-compteur-position {
+  margin: 0 0 var(--espace-xs) 0;
+  font-size: 16px;
+  text-align: center;
+  color: var(--couleur-texte-attenue);
 }
 
 /* --------------------------------------------------------------------------
