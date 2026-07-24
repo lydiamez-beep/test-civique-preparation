@@ -309,38 +309,212 @@
       bouton.type = "button";
       bouton.className = "cloture-bouton-terminer";
       bouton.textContent = "Terminer";
-      bouton.addEventListener("click", () => afficherEcranFinal(conteneur));
+      bouton.addEventListener("click", () => afficherAccueil(conteneur));
       conteneur.appendChild(bouton);
     }
 
-    /**
-     * Affiche l'écran final, après le clic sur "Terminer" de l'écran de clôture : un simple
-     * message d'au revoir, sans bouton ni score (sections 5.6 et 7.4).
-     * @param {HTMLElement} conteneur
-     */
-    function afficherEcranFinal(conteneur) {
-      window.scrollTo(0, 0);
-      conteneur.textContent = "";
-      conteneur.className = "ecran-microjeu ecran-final";
+    // Noms lisibles des thématiques (section 7.1). Seules "valeurs" et "institutions" ont
+    // des notions dans les données à ce jour (section 1.1) : les autres thématiques du
+    // dépôt (03, 04, 05) sont des fichiers vides et n'apparaissent donc dans aucune notion.
+    const NOMS_THEMATIQUES = {
+      valeurs: "Valeurs de la République",
+      institutions: "Institutions",
+    };
 
-      const texte = document.createElement("p");
-      texte.className = "final-texte";
-      texte.textContent = "À bientôt.";
-      conteneur.appendChild(texte);
+    /**
+     * Convertit l'identifiant technique d'une thématique en son nom lisible (section 7.1).
+     * @param {string} thematique
+     * @returns {string}
+     */
+    function nomLisibleThematique(thematique) {
+      if (NOMS_THEMATIQUES[thematique]) {
+        return NOMS_THEMATIQUES[thematique];
+      }
+      console.error(`Aucun nom lisible connu pour la thématique "${thematique}".`);
+      return thematique;
     }
 
     /**
-     * Point d'entrée : charge les données de deux thématiques, construit la session
-     * ordonnée (règles O3, O1, O4 — section 4.2) et sert son premier item.
+     * Accorde un mot au singulier ou au pluriel selon un nombre (règle française : le
+     * singulier ne s'applique qu'à 1).
+     * @param {number} nombre
+     * @param {string} singulier
+     * @param {string} pluriel
+     * @returns {string}
      */
-    async function demarrerSession() {
-      const conteneur = document.getElementById("conteneur-ecrans");
+    function accorder(nombre, singulier, pluriel) {
+      return nombre === 1 ? singulier : pluriel;
+    }
 
-      // 1. Chargement des données et fusion des notions des deux thématiques disponibles
-      //    (aucun contenu écrit en dur : tout provient des fichiers JSON de /data)
+    /**
+     * Construit la série de pastilles ● (notion solide) / ○ (notion en construction) du
+     * gabarit de la section 7.1, chacune dans son propre élément pour permettre la couleur
+     * sémantique par pastille (vert = acquis, gris = à venir — section 6). Aucun
+     * pourcentage, aucune barre de remplissage — interdits formels de la section 5.6.
+     * @param {number} nombreSolides
+     * @param {number} nombreTotal
+     * @returns {HTMLElement} Un <span> conteneur avec une pastille par notion de la thématique.
+     */
+    function construirePastilles(nombreSolides, nombreTotal) {
+      const conteneurPastilles = document.createElement("span");
+      conteneurPastilles.className = "accueil-pastilles";
+
+      for (let i = 0; i < nombreTotal; i += 1) {
+        const estSolide = i < nombreSolides;
+        const pastille = document.createElement("span");
+        pastille.className = estSolide ? "accueil-pastille accueil-pastille-solide" : "accueil-pastille accueil-pastille-vide";
+        pastille.textContent = estSolide ? "●" : "○";
+        conteneurPastilles.appendChild(pastille);
+      }
+
+      return conteneurPastilles;
+    }
+
+    /**
+     * Charge toutes les notions actuellement disponibles dans les données (section 1.1).
+     * Factorisé pour que l'écran d'accueil et la session jouée voient exactement les mêmes
+     * données et affichent donc le même nombre d'items.
+     * @returns {Promise<Array>} Le tableau de toutes les notions chargées.
+     */
+    async function chargerNotionsDisponibles() {
       const notionsValeurs = await chargerNotions("01-valeurs.json");
       const notionsInstitutions = await chargerNotions("02-institutions.json");
-      const notions = notionsValeurs.concat(notionsInstitutions);
+      return notionsValeurs.concat(notionsInstitutions);
+    }
+
+    /**
+     * Indique si l'apprenant a déjà répondu à au moins une question, tous thèmes
+     * confondus : détermine le libellé "Commencer" / "Continuer" du bouton principal
+     * de l'écran d'accueil (section 7.1).
+     * @returns {boolean}
+     */
+    function aDejaCommence() {
+      const tousLesEtats = litTousLesEtats();
+      return Object.values(tousLesEtats).some(
+        (etat) => Array.isArray(etat.moments_espaces) && etat.moments_espaces.length > 0
+      );
+    }
+
+    /**
+     * Regroupe les notions par thématique, dans leur ordre d'apparition dans les données,
+     * et calcule pour chacune son nombre de notions à l'état "solide" (critère
+     * d'acquisition de la section 1.7, via calculerEtat de /js/etat.js).
+     * @param {Array<Object>} notions
+     * @returns {Array<{thematique: string, notions: Array<Object>, nombreSolides: number}>}
+     */
+    function resumerThematiques(notions) {
+      const ordre = [];
+      const groupes = {};
+
+      notions.forEach((notion) => {
+        if (!groupes[notion.thematique]) {
+          groupes[notion.thematique] = [];
+          ordre.push(notion.thematique);
+        }
+        groupes[notion.thematique].push(notion);
+      });
+
+      return ordre.map((thematique) => {
+        const notionsThematique = groupes[thematique];
+        const nombreSolides = notionsThematique.filter((notion) => {
+          const etat = chargerEtat(notion.id);
+          return calculerEtat(etat, notion.nature) === "solide";
+        }).length;
+
+        return { thematique, notions: notionsThematique, nombreSolides };
+      });
+    }
+
+    /**
+     * Affiche l'écran d'accueil (section 7.1), point d'entrée avant toute session : titre,
+     * bouton principal vers la session à venir, puis "Ce que je sais faire" — la
+     * progression en capacités de la section 5.2. Formellement interdits ici (section
+     * 5.6) : tout pourcentage, toute barre de remplissage, tout cadenas, toute catégorie
+     * de niveau nommée.
+     * @param {HTMLElement} conteneur
+     */
+    async function afficherAccueil(conteneur) {
+      window.scrollTo(0, 0);
+      conteneur.textContent = "";
+      conteneur.className = "ecran-microjeu ecran-accueil";
+
+      const notions = await chargerNotionsDisponibles();
+      const angles = await chargerAngles();
+      const sessionAVenir = construireSession(notions, angles, {});
+      const nombreItems = sessionAVenir.length;
+
+      const titre = document.createElement("p");
+      titre.className = "accueil-titre";
+      titre.textContent = "Ma préparation";
+      conteneur.appendChild(titre);
+
+      const boutonPrincipal = document.createElement("button");
+      boutonPrincipal.type = "button";
+      boutonPrincipal.className = "accueil-bouton-principal";
+
+      const label = document.createElement("span");
+      label.className = "accueil-bouton-principal-label";
+      label.textContent = aDejaCommence() ? "Continuer" : "Commencer";
+      boutonPrincipal.appendChild(label);
+
+      const details = document.createElement("span");
+      details.className = "accueil-bouton-principal-details";
+      details.textContent =
+        `${nombreItems} ${accorder(nombreItems, "item", "items")} · ` +
+        `environ ${nombreItems} ${accorder(nombreItems, "minute", "minutes")}`;
+      boutonPrincipal.appendChild(details);
+
+      boutonPrincipal.addEventListener("click", () => demarrerSession(conteneur));
+      conteneur.appendChild(boutonPrincipal);
+
+      const separateur = document.createElement("hr");
+      separateur.className = "accueil-separateur";
+      conteneur.appendChild(separateur);
+
+      const sectionSavoirFaire = document.createElement("div");
+      sectionSavoirFaire.className = "accueil-savoir-faire";
+
+      const titreSavoirFaire = document.createElement("p");
+      titreSavoirFaire.className = "accueil-savoir-faire-titre";
+      titreSavoirFaire.textContent = "Ce que je sais faire";
+      sectionSavoirFaire.appendChild(titreSavoirFaire);
+
+      resumerThematiques(notions).forEach(({ thematique, notions: notionsThematique, nombreSolides }) => {
+        const blocThematique = document.createElement("div");
+        blocThematique.className = "accueil-thematique";
+
+        const nom = document.createElement("p");
+        nom.className = "accueil-thematique-nom";
+        nom.textContent = nomLisibleThematique(thematique);
+        blocThematique.appendChild(nom);
+
+        const ligne = document.createElement("p");
+        ligne.className = "accueil-thematique-ligne";
+
+        ligne.appendChild(construirePastilles(nombreSolides, notionsThematique.length));
+
+        const compte = document.createElement("span");
+        compte.className = "accueil-thematique-compte";
+        compte.textContent = `${nombreSolides} ${accorder(nombreSolides, "notion solide", "notions solides")}`;
+        ligne.appendChild(compte);
+
+        blocThematique.appendChild(ligne);
+        sectionSavoirFaire.appendChild(blocThematique);
+      });
+
+      conteneur.appendChild(sectionSavoirFaire);
+    }
+
+    /**
+     * Lance une session complète : construit la session ordonnée (règles O3, O1, O4 —
+     * section 4.2) et sert son premier item. Appelée depuis le bouton principal de
+     * l'écran d'accueil (section 7.1).
+     * @param {HTMLElement} conteneur
+     */
+    async function demarrerSession(conteneur) {
+      // 1. Chargement des données (aucun contenu écrit en dur : tout provient des
+      //    fichiers JSON de /data)
+      const notions = await chargerNotionsDisponibles();
       situationsSession = await chargerSituations();
       const angles = await chargerAngles();
 
@@ -359,7 +533,7 @@
       servirItemCourant(conteneur);
     }
 
-    demarrerSession();
+    afficherAccueil(document.getElementById("conteneur-ecrans"));
   </script>
 </body>
 </html>

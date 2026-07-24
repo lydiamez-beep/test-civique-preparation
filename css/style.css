@@ -482,19 +482,141 @@ button {
 }
 
 /* ==========================================================================
-   Écran final ("À bientôt.")
-   Point final de la session, pas un message : centré, sobre, très aéré.
+   Écran d'accueil (section 7.1)
+   Point d'entrée avant toute session. Le bouton principal est le seul
+   élément appuyé de l'écran ; le reste — titre, thématiques, pastilles —
+   reste sobre pour ne jamais lui faire concurrence.
    ========================================================================== */
 
-.ecran-final {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.ecran-accueil {
+  text-align: left;
 }
 
-.final-texte {
+.accueil-titre {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--couleur-texte);
+}
+
+/* --------------------------------------------------------------------------
+   Bouton principal ("Commencer" / "Continuer")
+   Seul élément appuyé de l'écran : fond plein plutôt que le contour neutre
+   des autres boutons du site, mais toujours dans la palette neutre —
+   aucune couleur qui ne serait pas déjà sémantique (section 6). Libellé et
+   détails sur deux lignes, le libellé nettement plus fort.
+   -------------------------------------------------------------------------- */
+.accueil-bouton-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--espace-xs);
+  width: 100%;
+  min-height: 48px;
+  padding: var(--espace-s);
+  background-color: var(--couleur-texte);
+  border: 2px solid var(--couleur-texte);
+  border-radius: 4px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.accueil-bouton-principal:hover,
+.accueil-bouton-principal:focus-visible {
+  background-color: var(--couleur-texte-attenue);
+  border-color: var(--couleur-texte-attenue);
+}
+
+.accueil-bouton-principal-label {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--couleur-fond);
+}
+
+.accueil-bouton-principal-details {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--couleur-fond);
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   Séparateur avant "Ce que je sais faire"
+   Même traitement discret que celui de l'écran de révélation.
+   -------------------------------------------------------------------------- */
+.accueil-separateur {
+  width: 100%;
+  height: 0;
+  margin: 0;
+  border: none;
+  border-top: 1px solid var(--couleur-image-fond);
+}
+
+/* --------------------------------------------------------------------------
+   "Ce que je sais faire" — progression en capacités (section 5.2)
+   Formellement interdits ici (section 5.6) : tout pourcentage, toute barre
+   de remplissage, tout cadenas, toute catégorie de niveau nommée.
+   Uniquement des pastilles comptables.
+   -------------------------------------------------------------------------- */
+.accueil-savoir-faire {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-m);
+}
+
+.accueil-savoir-faire-titre {
   margin: 0;
   font-size: 1rem;
+  font-weight: 700;
+  color: var(--couleur-texte);
+}
+
+.accueil-thematique {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-xs);
+}
+
+/* Nom de la thématique : plus discret que le bouton principal — poids et
+   teinte atténués. */
+.accueil-thematique-nom {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--couleur-texte-attenue);
+}
+
+.accueil-thematique-ligne {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--espace-xs);
+}
+
+/* Pastilles ● / ○ : du texte, pas des éléments graphiques — espacées pour
+   rester lisibles à cette taille. */
+.accueil-pastilles {
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+}
+
+.accueil-pastille {
+  line-height: 1;
+}
+
+/* Couleurs sémantiques (section 6) : vert pour une notion acquise, gris
+   pour une notion encore à construire. Jamais une autre couleur. */
+.accueil-pastille-solide {
+  color: var(--couleur-acquis);
+}
+
+.accueil-pastille-vide {
+  color: var(--couleur-a-venir);
+}
+
+.accueil-thematique-compte {
+  font-size: 0.95rem;
   color: var(--couleur-texte-attenue);
 }
 
