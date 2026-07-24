@@ -251,5 +251,45 @@
     "charge_affective": "basse",
     "cadrage_factuel": "",
     "images": { "situation": "/images/situations/bulletin-oui-non.jpg", "lieu": "/images/lieux/bureau-vote.jpg" }
+  },
+  {
+    "id": "REPUBLIQUE_01",
+    "thematique": "institutions",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "la République",
+    "pourquoi_ca_existe": "Pour que les dirigeants soient choisis, et non désignés par naissance.",
+    "definition_simple": "En République, les dirigeants sont élus et gouvernent au nom du peuple.",
+    "definition_officielle": "La République est un régime politique dans lequel les dirigeants sont élus et gouvernent au nom du peuple.",
+    "lexique": ["République", "régime politique", "élu"],
+    "portes_entree": ["contraste", "situation", "definition", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "République et démocratie sont exactement la même chose", "frequence_estimee": 0.6, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "DEMOCRATIE_01", "frontiere": "La démocratie dit à qui appartient le pouvoir. La République dit comment les dirigeants arrivent au pouvoir." }
+    ],
+    "contre_exemples": [
+      "Un pays dirigé par un roi mais où le peuple vote",
+      "Un pays où le chef d'État hérite de sa fonction"
+    ],
+    "cas_limites": [
+      "Une république où les élections ne sont pas libres",
+      "Une monarchie où le roi n'a aucun pouvoir réel"
+    ],
+    "scenarios": ["mairie"],
+    "ancrage_spatial": ["mairie"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Qu'est-ce qu'une République ?",
+      "Comment les dirigeants sont-ils désignés en République ?",
+      "Au nom de qui les dirigeants gouvernent-ils ?",
+      "Quelle République est en vigueur en France aujourd'hui ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "En République, on choisit ses dirigeants.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/mairie-facade.jpg", "lieu": "/images/lieux/mairie-facade.jpg" }
   }
 ]

@@ -1134,5 +1134,157 @@
     "charge_affective": "haute",
     "cadrage_factuel": "Voici ce que dit la loi française. Chacun garde ses convictions personnelles.",
     "images": { "situation": "/images/situations/mur-mairie.jpg", "lieu": "/images/lieux/hall-mairie.jpg" }
+  },
+  {
+    "id": "LIBERTE_01",
+    "thematique": "valeurs",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "la liberté",
+    "pourquoi_ca_existe": "Pour que la liberté de chacun ne gêne pas les autres.",
+    "definition_simple": "Chacun est libre, tant qu'il ne nuit pas aux autres.",
+    "definition_officielle": "La liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui. Les libertés sont les mêmes pour l'ensemble des citoyens, dans le respect des lois.",
+    "lexique": ["liberté", "autrui", "nuire"],
+    "portes_entree": ["situation", "contraste", "definition", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "Être libre, c'est faire ce qu'on veut chez soi", "frequence_estimee": 0.6, "frequence_affichee": "moyen" },
+      { "texte": "Avec autant de lois, la liberté n'existe pas vraiment", "frequence_estimee": 0.4, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "LIBERTE_CONSCIENCE_01", "frontiere": "La liberté vaut pour tous les actes. La liberté de conscience porte précisément sur les convictions." }
+    ],
+    "contre_exemples": [
+      "Écouter de la musique avec un casque",
+      "Recevoir des amis chez soi en journée"
+    ],
+    "cas_limites": [
+      "Une fête d'anniversaire qui se prolonge tard un samedi",
+      "Des travaux bruyants un dimanche matin"
+    ],
+    "scenarios": ["logement"],
+    "ancrage_spatial": ["immeuble"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Qu'est-ce que la liberté selon la Déclaration des droits de l'homme ?",
+      "Que dit l'article 4 de la DDHC ?",
+      "Où s'arrête la liberté de chacun ?",
+      "Qui définit les limites de la liberté ?",
+      "Un voisin met de la musique très fort la nuit. Est-il libre de le faire ?",
+      "Qu'est-ce qui n'est PAS permis au nom de la liberté ?",
+      "La liberté signifie-t-elle faire tout ce que l'on veut ?",
+      "Sur quoi porte la liberté ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "On est libre, tant qu'on ne gêne pas les autres.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/immeuble-nuit.jpg", "lieu": "/images/lieux/immeuble.jpg" }
+  },
+  {
+    "id": "PARTICIPATION_01",
+    "thematique": "valeurs",
+    "nature": "fait_arbitraire",
+    "nom_affiche": "la participation citoyenne",
+    "pourquoi_ca_existe": "Pour que chacun puisse agir pour les autres, sans y être obligé.",
+    "definition_simple": "S'engager dans une association est une façon de participer à la vie du pays.",
+    "definition_officielle": "L'organisation de collectes au profit d'associations humanitaires ou l'engagement dans une association de quartier constituent des exemples de participation citoyenne mettant en œuvre le principe républicain de solidarité et de fraternité.",
+    "lexique": ["association", "engagement", "bénévole"],
+    "portes_entree": ["lieu", "situation", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "Il faut être français pour être bénévole", "frequence_estimee": 0.5, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "FRATERNITE_01", "frontiere": "La fraternité est le principe. La participation citoyenne en est une mise en pratique." }
+    ],
+    "contre_exemples": [],
+    "cas_limites": [],
+    "scenarios": ["quartier"],
+    "ancrage_spatial": ["panneau_affichage"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Citez un exemple de participation citoyenne.",
+      "L'engagement associatif relève-t-il de quel principe républicain ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Aider dans une association, c'est participer à la vie du pays.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/affiche-association.jpg", "lieu": "/images/lieux/quartier.jpg" }
+  },
+  {
+    "id": "DEFENSE_NATION_01",
+    "thematique": "valeurs",
+    "nature": "norme",
+    "nom_affiche": "la défense de la Nation",
+    "pourquoi_ca_existe": "Pour que le pays puisse compter sur ses citoyens en cas de nécessité.",
+    "definition_simple": "En cas de nécessité, chaque citoyen français doit participer à la défense du pays.",
+    "definition_officielle": "Le principe de solidarité exige aussi que chaque citoyen français doive participer à la défense de la Nation en cas de nécessité.",
+    "lexique": ["défense", "Nation", "nécessité"],
+    "portes_entree": ["document", "situation", "definition"],
+    "erreurs_typiques": [
+      { "texte": "La défense concerne seulement les militaires", "frequence_estimee": 0.6, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "SOLIDARITE_01", "frontiere": "La solidarité finance les services publics. La défense est un devoir du même principe." }
+    ],
+    "contre_exemples": [],
+    "cas_limites": [],
+    "scenarios": ["domicile"],
+    "ancrage_spatial": ["courrier_officiel"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": ["SOLIDARITE_01"],
+    "formulations_examen": [
+      "Qu'exige le principe de solidarité en cas de nécessité ?",
+      "Chaque citoyen doit-il participer à la défense de la Nation ?",
+      "Quel devoir découle du principe de solidarité ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "En cas de besoin, chaque citoyen aide à défendre le pays.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/courrier-officiel.jpg", "lieu": "/images/lieux/domicile.jpg" }
+  },
+  {
+    "id": "PROSELYTISME_01",
+    "thematique": "valeurs",
+    "nature": "norme",
+    "nom_affiche": "le prosélytisme",
+    "pourquoi_ca_existe": "Pour que personne ne soit obligé de croire contre sa volonté.",
+    "definition_simple": "On peut parler de sa religion aux autres. On ne peut pas les forcer.",
+    "definition_officielle": "Le prosélytisme religieux est le fait de vouloir convaincre quelqu'un d'adopter sa religion. En France, cela est autorisé, à condition de ne pas forcer quelqu'un à croire contre son gré, en utilisant la violence, la menace ou la pression.",
+    "lexique": ["prosélytisme", "convaincre", "contrainte"],
+    "portes_entree": ["situation", "contraste", "definition"],
+    "erreurs_typiques": [
+      { "texte": "Parler de sa religion aux autres est interdit en France", "frequence_estimee": 0.6, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "NEUTRALITE_ETAT_01", "frontiere": "Dans la rue, parler de sa religion est autorisé. Dans un service public, c'est interdit." }
+    ],
+    "contre_exemples": [
+      "Un collègue parle de sa foi pendant la pause déjeuner",
+      "Des personnes distribuent des tracts sur un trottoir"
+    ],
+    "cas_limites": [
+      "Une distribution de tracts qui bloque l'entrée d'un magasin",
+      "Un agent public qui répond à une question sur sa religion pendant son service"
+    ],
+    "scenarios": ["domicile", "rue"],
+    "ancrage_spatial": ["porte_immeuble"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": ["LIBERTE_CONSCIENCE_01"],
+    "formulations_examen": [
+      "Qu'est-ce que le prosélytisme ?",
+      "Le prosélytisme est-il autorisé en France ?",
+      "Peut-on distribuer des tracts religieux dans la rue ?",
+      "Peut-on faire du prosélytisme dans une mairie ?",
+      "Dans quel cas le prosélytisme devient-il interdit ?",
+      "Deux personnes sonnent chez vous pour parler de religion. Est-ce légal ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "On peut parler de sa religion. On ne peut pas forcer les autres.",
+    "charge_affective": "haute",
+    "cadrage_factuel": "Voici ce que dit la loi française. Chacun garde ses convictions personnelles.",
+    "images": { "situation": "/images/situations/porte-immeuble.jpg", "lieu": "/images/lieux/immeuble.jpg" }
   }
 ]
