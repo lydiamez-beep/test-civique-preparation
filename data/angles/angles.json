@@ -188,10 +188,10 @@
     "situation": "SIT_BATIMENT_01",
     "notion": "DRAPEAU_01",
     "role": "ancrage",
-    "question": "De quelles couleurs est ce drapeau ?",
-    "reponse_correcte": "Bleu, blanc, rouge",
-    "reponse_incorrecte": "Rouge, blanc, bleu",
-    "explication_courte": "L'ordre commence toujours par le bleu, du côté du mât.",
+    "question": "Que représentent ces trois couleurs ?",
+    "reponse_correcte": "La France",
+    "reponse_incorrecte": "La région",
+    "explication_courte": "Le drapeau français est bleu, blanc et rouge.",
     "feedback_erreur": "Les trois couleurs sont bonnes, mais l'ordre compte : le bleu est toujours le premier."
   },
   {
@@ -210,7 +210,7 @@
     "situation": "SIT_PREFECTURE_01",
     "notion": "LANGUE_OFFICIELLE_01",
     "role": "application",
-    "question": "Dans quelle langue devez-vous remplir ce formulaire ?",
+    "question": "Dans quelle langue est ce document officiel ?",
     "reponse_correcte": "En français",
     "reponse_incorrecte": "Dans la langue de votre choix",
     "explication_courte": "Les documents de l'administration se remplissent en français.",
@@ -235,7 +235,7 @@
     "question": "Quel est le dernier mot ?",
     "reponse_correcte": "Sociale",
     "reponse_incorrecte": "Libre",
-    "explication_courte": "Quatre mots décrivent la République : indivisible, laïque, démocratique, sociale.",
+    "explication_courte": "Cette phrase se termine par quatre mots : indivisible, laïque, démocratique et sociale.",
     "feedback_erreur": "La liberté est une valeur de la France, mais ce n'est pas l'un des quatre mots de cette phrase. Le quatrième est « sociale »."
   },
   {
@@ -246,7 +246,7 @@
     "question": "Les lois sont-elles les mêmes chez lui ?",
     "reponse_correcte": "Oui",
     "reponse_incorrecte": "Non",
-    "explication_courte": "Métropole et outre-mer suivent les mêmes lois.",
+    "explication_courte": "Les mêmes droits et les mêmes règles s'appliquent partout en France.",
     "feedback_erreur": "L'organisation locale peut changer d'un territoire à l'autre. Mais les droits et les devoirs sont les mêmes partout."
   },
   {
