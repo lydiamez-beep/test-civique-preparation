@@ -190,5 +190,95 @@
     ],
     "image": "/images/situations/14-juillet.jpg",
     "charge_affective": "basse"
+  },
+  {
+    "id": "SIT_ECOLE_03",
+    "titre": "Une chanson à l'école",
+    "lieu": "ecole",
+    "acteurs": ["parent", "enfant"],
+    "recit": ["Votre fils rentre de l'école primaire.", "Il chante une chanson apprise en classe.", "Il dit que tous les enfants de France l'apprennent."],
+    "image": "/images/situations/ecole-classe.jpg",
+    "charge_affective": "basse"
+  },
+  {
+    "id": "SIT_MAIRIE_03",
+    "titre": "Le buste dans le hall",
+    "lieu": "mairie",
+    "acteurs": ["habitant"],
+    "recit": ["Vous entrez dans le hall de la mairie.", "Un buste de femme est posé sur un meuble.", "Elle porte un bonnet rouge."],
+    "image": "/images/situations/mairie-buste.jpg",
+    "charge_affective": "basse"
+  },
+  {
+    "id": "SIT_BATIMENT_01",
+    "titre": "Reconnaître un bâtiment officiel",
+    "lieu": "rue",
+    "acteurs": ["habitant"],
+    "recit": ["Vous cherchez un bâtiment public dans une ville inconnue.", "Un drapeau flotte sur une façade."],
+    "image": "/images/situations/mairie-drapeau.jpg",
+    "charge_affective": "basse"
+  },
+  {
+    "id": "SIT_STADE_01",
+    "titre": "Le maillot de l'équipe",
+    "lieu": "rue",
+    "acteurs": ["ami", "vous"],
+    "recit": ["Un ami porte un maillot de l'équipe de France.", "Un coq est brodé sur la poitrine.", "Il dit que le coq est écrit dans la Constitution."],
+    "image": "/images/situations/maillot-coq.jpg",
+    "charge_affective": "basse"
+  },
+  {
+    "id": "SIT_PREFECTURE_01",
+    "titre": "Un formulaire à remplir",
+    "lieu": "prefecture",
+    "acteurs": ["usager"],
+    "recit": ["Vous remplissez un formulaire à la préfecture.", "Vous voulez écrire vos réponses dans votre langue."],
+    "image": "/images/situations/formulaire.jpg",
+    "charge_affective": "basse"
+  },
+  {
+    "id": "SIT_PLAQUE_01",
+    "titre": "Une plaque sur un mur",
+    "lieu": "rue",
+    "acteurs": ["habitant"],
+    "recit": ["Une plaque est fixée sur le mur d'une école.", "On y lit : « Les hommes naissent et demeurent libres et égaux en droits »."],
+    "image": "/images/situations/plaque-ddhc.jpg",
+    "charge_affective": "basse"
+  },
+  {
+    "id": "SIT_TEXTE_01",
+    "titre": "La première phrase",
+    "lieu": "mairie",
+    "acteurs": ["habitant"],
+    "recit": ["Un document officiel commence par une phrase.", "Elle dit : « La France est une République indivisible, laïque, démocratique et … »", "Le dernier mot est illisible."],
+    "image": "/images/situations/constitution-texte.jpg",
+    "charge_affective": "basse"
+  },
+  {
+    "id": "SIT_OUTREMER_01",
+    "titre": "Un cousin en Guadeloupe",
+    "lieu": "domicile",
+    "acteurs": ["cousin", "vous"],
+    "recit": ["Votre cousin vit en Guadeloupe.", "Vous vivez à Lyon.", "Il vous demande si les lois sont les mêmes chez lui."],
+    "image": "/images/situations/carte-france.jpg",
+    "charge_affective": "basse"
+  },
+  {
+    "id": "SIT_DECISION_01",
+    "titre": "Qui a décidé ?",
+    "lieu": "domicile",
+    "acteurs": ["habitant"],
+    "recit": ["Une nouvelle règle change la vie quotidienne.", "Un voisin dit que le président a décidé seul."],
+    "image": "/images/situations/urne.jpg",
+    "charge_affective": "basse"
+  },
+  {
+    "id": "SIT_BULLETIN_01",
+    "titre": "Un bulletin sans nom",
+    "lieu": "bureau_de_vote",
+    "acteurs": ["electeur"],
+    "recit": ["Vous entrez dans le bureau de vote.", "Sur le bulletin, aucun nom de candidat.", "Il y a seulement deux mots : oui et non."],
+    "image": "/images/situations/bulletin-oui-non.jpg",
+    "charge_affective": "basse"
   }
 ]

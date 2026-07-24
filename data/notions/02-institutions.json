@@ -127,5 +127,129 @@
     "charge_affective": "basse",
     "cadrage_factuel": "",
     "images": { "situation": "/images/situations/assemblee.jpg", "lieu": "/images/lieux/assemblee-nationale.jpg" }
+  },
+  {
+    "id": "INDIVISIBILITE_01",
+    "thematique": "institutions",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "l'unité de la République",
+    "pourquoi_ca_existe": "Pour que tous les Français aient les mêmes droits, partout.",
+    "definition_simple": "Les mêmes lois s'appliquent partout en France.",
+    "definition_officielle": "Tous les Français, partout dans le pays, métropole et outre-mer, sont soumis aux mêmes lois et ont les mêmes droits et devoirs. C'est ce qu'on appelle l'unité de la République.",
+    "lexique": ["indivisible", "métropole", "outre-mer", "unité"],
+    "portes_entree": ["situation", "lieu", "contraste", "definition"],
+    "erreurs_typiques": [
+      { "texte": "Les territoires d'outre-mer ont d'autres lois", "frequence_estimee": 0.6, "frequence_affichee": "moyen" },
+      { "texte": "Chaque région décide de ses règles", "frequence_estimee": 0.4, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [],
+    "contre_exemples": [
+      "Une commune organise sa cantine scolaire à sa façon",
+      "Une région finance ses propres lycées"
+    ],
+    "cas_limites": [
+      "Le droit local d'Alsace et de Moselle",
+      "Une collectivité d'outre-mer avec des compétences propres"
+    ],
+    "scenarios": ["mairie"],
+    "ancrage_spatial": ["carte_france"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Que signifie « République indivisible » ?",
+      "Qu'est-ce que l'unité de la République ?",
+      "Les lois sont-elles les mêmes en métropole et en outre-mer ?",
+      "Un groupe peut-il décider à la place de tous les Français ?",
+      "Votre cousin vit en Guadeloupe. A-t-il les mêmes droits que vous ?",
+      "Qui prend les décisions en France ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Partout en France, les mêmes lois.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/carte-france.jpg", "lieu": "/images/lieux/carte-france.jpg" }
+  },
+  {
+    "id": "DEMOCRATIE_01",
+    "thematique": "institutions",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "la démocratie",
+    "pourquoi_ca_existe": "Pour que le pouvoir appartienne au peuple, et non à une seule personne.",
+    "definition_simple": "En France, c'est le peuple qui décide, par ses représentants ou directement.",
+    "definition_officielle": "La souveraineté nationale appartient au peuple qui l'exerce par ses représentants et par la voie du référendum.",
+    "lexique": ["démocratie", "souveraineté", "peuple", "représentant"],
+    "portes_entree": ["situation", "contraste", "definition", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "Le président décide seul de tout", "frequence_estimee": 0.6, "frequence_affichee": "moyen" },
+      { "texte": "Le peuple ne décide de rien entre deux élections", "frequence_estimee": 0.5, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "SUFFRAGE_UNIVERSEL_01", "frontiere": "La démocratie dit à qui appartient le pouvoir. Le suffrage universel dit comment on le transmet." }
+    ],
+    "contre_exemples": [
+      "Un roi qui transmet le pouvoir à son fils",
+      "Un dirigeant qui reste au pouvoir sans élection"
+    ],
+    "cas_limites": [
+      "Un président élu qui gouverne par ordonnances",
+      "Une décision prise par un tribunal contre l'avis du gouvernement"
+    ],
+    "scenarios": ["bureau_de_vote", "mairie"],
+    "ancrage_spatial": ["urne"],
+    "parcours_narratifs": { "principal": "P_VOTE", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Qu'est-ce qu'une démocratie ?",
+      "À qui appartient la souveraineté nationale en France ?",
+      "Que dit l'article 3 de la Constitution ?",
+      "Comment le peuple exerce-t-il son pouvoir ?",
+      "Qu'est-ce que la souveraineté ?",
+      "Qu'est-ce qu'une République ?",
+      "Au nom de qui les dirigeants gouvernent-ils ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "En France, le pouvoir appartient au peuple.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/urne.jpg", "lieu": "/images/lieux/bureau-vote.jpg" }
+  },
+  {
+    "id": "REFERENDUM_01",
+    "thematique": "institutions",
+    "nature": "systeme_relationnel",
+    "nom_affiche": "le référendum",
+    "pourquoi_ca_existe": "Pour que le peuple décide lui-même sur une question précise.",
+    "definition_simple": "Le référendum permet de répondre oui ou non à une question posée à tout le pays.",
+    "definition_officielle": "La souveraineté nationale appartient au peuple qui l'exerce par ses représentants et par la voie du référendum.",
+    "lexique": ["référendum", "consultation", "souveraineté"],
+    "portes_entree": ["situation", "contraste", "definition"],
+    "erreurs_typiques": [
+      { "texte": "Le référendum sert à élire une personne", "frequence_estimee": 0.6, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "DEMOCRATIE_01", "frontiere": "D'habitude on choisit un représentant. Au référendum, on décide soi-même de la question." }
+    ],
+    "contre_exemples": [
+      "Un sondage d'opinion publié dans un journal",
+      "Une consultation organisée par une commune pour avis"
+    ],
+    "cas_limites": [
+      "Un référendum dont le résultat n'est pas suivi d'effet",
+      "Une consultation locale sur un projet d'aménagement"
+    ],
+    "scenarios": ["bureau_de_vote"],
+    "ancrage_spatial": ["urne"],
+    "parcours_narratifs": { "principal": "P_VOTE", "secondaires": [] },
+    "prerequis": ["DEMOCRATIE_01"],
+    "formulations_examen": [
+      "Qu'est-ce qu'un référendum ?",
+      "Comment le peuple peut-il décider directement ?",
+      "Quelle différence entre voter pour un représentant et voter à un référendum ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Une question posée à tout le pays. On répond oui ou non.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/bulletin-oui-non.jpg", "lieu": "/images/lieux/bureau-vote.jpg" }
   }
 ]

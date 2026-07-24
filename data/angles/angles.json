@@ -160,5 +160,115 @@
     "reponse_incorrecte": "Le 1er mai",
     "explication_courte": "Drapeaux et cérémonie devant la mairie : c'est la grande fête du pays.",
     "feedback_erreur": "Le 1er mai est aussi un jour férié, mais il n'y a ni drapeaux ni cérémonie officielle. Le 14 juillet, des feux d'artifice sont organisés le soir."
+  },
+  {
+    "id": "ANGLE_ECOLE_03_HYMNE",
+    "situation": "SIT_ECOLE_03",
+    "notion": "HYMNE_01",
+    "role": "ancrage",
+    "question": "Quelle chanson apprennent tous les enfants de France ?",
+    "reponse_correcte": "La Marseillaise",
+    "reponse_incorrecte": "La Parisienne",
+    "explication_courte": "C'est le chant du pays, appris à l'école primaire.",
+    "feedback_erreur": "La Parisienne n'existe pas comme chant national. Le chant appris par tous les enfants s'appelle La Marseillaise."
+  },
+  {
+    "id": "ANGLE_MAIRIE_03_MARIANNE",
+    "situation": "SIT_MAIRIE_03",
+    "notion": "MARIANNE_01",
+    "role": "ancrage",
+    "question": "Qui est cette femme ?",
+    "reponse_correcte": "Marianne",
+    "reponse_incorrecte": "Une ancienne reine de France",
+    "explication_courte": "Son buste est présent dans toutes les mairies de France.",
+    "feedback_erreur": "Ce n'est pas une personne réelle ni une reine. C'est une figure qui représente la République depuis la Révolution."
+  },
+  {
+    "id": "ANGLE_BATIMENT_01_DRAPEAU",
+    "situation": "SIT_BATIMENT_01",
+    "notion": "DRAPEAU_01",
+    "role": "ancrage",
+    "question": "De quelles couleurs est ce drapeau ?",
+    "reponse_correcte": "Bleu, blanc, rouge",
+    "reponse_incorrecte": "Rouge, blanc, bleu",
+    "explication_courte": "L'ordre commence toujours par le bleu, du côté du mât.",
+    "feedback_erreur": "Les trois couleurs sont bonnes, mais l'ordre compte : le bleu est toujours le premier."
+  },
+  {
+    "id": "ANGLE_STADE_01_COQ",
+    "situation": "SIT_STADE_01",
+    "notion": "COQ_01",
+    "role": "application",
+    "question": "Votre ami a-t-il raison ?",
+    "reponse_correcte": "Non",
+    "reponse_incorrecte": "Oui",
+    "explication_courte": "Le coq représente la France, mais aucun texte officiel ne le dit.",
+    "feedback_erreur": "Beaucoup le croient, parce qu'on le voit partout. Le drapeau et la devise sont écrits dans les textes officiels. Le coq, non."
+  },
+  {
+    "id": "ANGLE_PREFECTURE_01_LANGUE",
+    "situation": "SIT_PREFECTURE_01",
+    "notion": "LANGUE_OFFICIELLE_01",
+    "role": "application",
+    "question": "Dans quelle langue devez-vous remplir ce formulaire ?",
+    "reponse_correcte": "En français",
+    "reponse_incorrecte": "Dans la langue de votre choix",
+    "explication_courte": "Les documents de l'administration se remplissent en français.",
+    "feedback_erreur": "Chacun parle la langue qu'il veut dans sa vie privée. Mais l'administration n'utilise qu'une seule langue pour ses documents."
+  },
+  {
+    "id": "ANGLE_PLAQUE_01_DDHC",
+    "situation": "SIT_PLAQUE_01",
+    "notion": "DDHC_01",
+    "role": "ancrage",
+    "question": "De quand date cette phrase ?",
+    "reponse_correcte": "1789",
+    "reponse_incorrecte": "1958",
+    "explication_courte": "Cette phrase vient d'un texte écrit pendant la Révolution.",
+    "feedback_erreur": "1958 est la date d'un autre texte, qui organise les pouvoirs. Celui-ci est plus ancien : il date de la Révolution."
+  },
+  {
+    "id": "ANGLE_TEXTE_01_ARTICLE",
+    "situation": "SIT_TEXTE_01",
+    "notion": "ARTICLE_PREMIER_01",
+    "role": "ancrage",
+    "question": "Quel est le dernier mot ?",
+    "reponse_correcte": "Sociale",
+    "reponse_incorrecte": "Libre",
+    "explication_courte": "Quatre mots décrivent la République : indivisible, laïque, démocratique, sociale.",
+    "feedback_erreur": "La liberté est une valeur de la France, mais ce n'est pas l'un des quatre mots de cette phrase. Le quatrième est « sociale »."
+  },
+  {
+    "id": "ANGLE_OUTREMER_01_INDIVISIBILITE",
+    "situation": "SIT_OUTREMER_01",
+    "notion": "INDIVISIBILITE_01",
+    "role": "application",
+    "question": "Les lois sont-elles les mêmes chez lui ?",
+    "reponse_correcte": "Oui",
+    "reponse_incorrecte": "Non",
+    "explication_courte": "Métropole et outre-mer suivent les mêmes lois.",
+    "feedback_erreur": "L'organisation locale peut changer d'un territoire à l'autre. Mais les droits et les devoirs sont les mêmes partout."
+  },
+  {
+    "id": "ANGLE_DECISION_01_DEMOCRATIE",
+    "situation": "SIT_DECISION_01",
+    "notion": "DEMOCRATIE_01",
+    "role": "application",
+    "question": "Votre voisin a-t-il raison ?",
+    "reponse_correcte": "Non",
+    "reponse_incorrecte": "Oui",
+    "explication_courte": "Les règles sont votées par des personnes élues par le peuple.",
+    "feedback_erreur": "Le président a un rôle important, mais il ne décide pas seul. Les règles sont votées par des représentants que le peuple a choisis."
+  },
+  {
+    "id": "ANGLE_BULLETIN_01_REFERENDUM",
+    "situation": "SIT_BULLETIN_01",
+    "notion": "REFERENDUM_01",
+    "role": "application",
+    "question": "Que choisissez-vous aujourd'hui ?",
+    "reponse_correcte": "Une réponse à une question",
+    "reponse_incorrecte": "Un représentant",
+    "explication_courte": "Ce jour-là, le peuple décide lui-même, sans passer par un élu.",
+    "feedback_erreur": "D'habitude on choisit une personne qui décidera. Ici, il n'y a aucun nom : c'est vous qui répondez directement à la question posée."
   }
 ]

@@ -494,5 +494,242 @@
     "charge_affective": "basse",
     "cadrage_factuel": "",
     "images": { "situation": "/images/situations/14-juillet.jpg", "lieu": "/images/lieux/place-publique.jpg" }
+  },
+  {
+    "id": "HYMNE_01",
+    "thematique": "valeurs",
+    "nature": "fait_arbitraire",
+    "nom_affiche": "l'hymne national",
+    "pourquoi_ca_existe": "Pour que le pays ait un chant commun.",
+    "definition_simple": "L'hymne de la France s'appelle La Marseillaise.",
+    "definition_officielle": "En 1792, l'hymne national français, La Marseillaise, a été écrit par Rouget de Lisle. Elle est étudiée par les enfants à l'école primaire.",
+    "lexique": ["hymne", "Marseillaise"],
+    "portes_entree": ["lieu", "mot_declencheur", "definition"],
+    "erreurs_typiques": [
+      { "texte": "L'hymne français s'appelle La Parisienne", "frequence_estimee": 0.3, "frequence_affichee": "faible" }
+    ],
+    "notions_voisines": [],
+    "contre_exemples": [],
+    "cas_limites": [],
+    "scenarios": ["ecole"],
+    "ancrage_spatial": ["ecole_primaire"],
+    "parcours_narratifs": { "principal": "P_ECOLE", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Quel est l'hymne national français ?",
+      "Comment s'appelle l'hymne de la France ?",
+      "Qui a écrit La Marseillaise ?",
+      "En quelle année La Marseillaise a-t-elle été écrite ?",
+      "Où les enfants apprennent-ils La Marseillaise ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Le chant de la France s'appelle La Marseillaise.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/ecole-classe.jpg", "lieu": "/images/lieux/ecole-primaire.jpg" }
+  },
+  {
+    "id": "MARIANNE_01",
+    "thematique": "valeurs",
+    "nature": "fait_arbitraire",
+    "nom_affiche": "Marianne",
+    "pourquoi_ca_existe": "Pour rappeler la Révolution française.",
+    "definition_simple": "Marianne est le symbole de la République. Elle porte un bonnet rouge.",
+    "definition_officielle": "Marianne, une femme portant un bonnet phrygien, symbole de la liberté, est devenue le symbole de la République. Sa statue, placée dans toutes les mairies, rappelle la Révolution française.",
+    "lexique": ["Marianne", "bonnet phrygien", "buste"],
+    "portes_entree": ["lieu", "image", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "C'est une reine de France", "frequence_estimee": 0.4, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [],
+    "contre_exemples": [],
+    "cas_limites": [],
+    "scenarios": ["mairie"],
+    "ancrage_spatial": ["hall_mairie"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Qui est Marianne ?",
+      "Que représente Marianne ?",
+      "Que porte Marianne sur la tête ?",
+      "Que symbolise le bonnet phrygien ?",
+      "Où trouve-t-on une statue de Marianne ?",
+      "Vous entrez dans une mairie et voyez le buste d'une femme au bonnet rouge. Qui est-ce ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Marianne est le visage de la République française.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/mairie-buste.jpg", "lieu": "/images/lieux/hall-mairie.jpg" }
+  },
+  {
+    "id": "DRAPEAU_01",
+    "thematique": "valeurs",
+    "nature": "fait_arbitraire",
+    "nom_affiche": "le drapeau français",
+    "pourquoi_ca_existe": "Pour représenter la France depuis la Révolution.",
+    "definition_simple": "Le drapeau français a trois couleurs : bleu, blanc, rouge.",
+    "definition_officielle": "Le drapeau tricolore (bleu, blanc, rouge) a été créé pendant la Révolution. Il est devenu le drapeau officiel de la France en 1794.",
+    "lexique": ["tricolore", "drapeau"],
+    "portes_entree": ["lieu", "image", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "Rouge, blanc, bleu", "frequence_estimee": 0.4, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [],
+    "contre_exemples": [],
+    "cas_limites": [],
+    "scenarios": ["mairie", "ecole"],
+    "ancrage_spatial": ["facade_mairie"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Quelles sont les couleurs du drapeau français ?",
+      "Dans quel ordre sont les couleurs du drapeau ?",
+      "Quand le drapeau tricolore est-il devenu officiel ?",
+      "Quand le drapeau tricolore a-t-il été créé ?",
+      "Pendant quelle période le drapeau tricolore n'a-t-il pas été utilisé ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Le drapeau de la France est bleu, blanc et rouge.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/mairie-drapeau.jpg", "lieu": "/images/lieux/facade-mairie.jpg" }
+  },
+  {
+    "id": "COQ_01",
+    "thematique": "valeurs",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "le coq",
+    "pourquoi_ca_existe": "Pour représenter la fierté, le courage et la vigilance.",
+    "definition_simple": "Le coq représente la France, mais ce n'est pas un symbole officiel.",
+    "definition_officielle": "Le coq représente la fierté, le courage et la vigilance. Bien qu'il n'ait pas de statut officiel selon la Constitution, il est utilisé depuis l'Antiquité et est largement reconnu comme un symbole national.",
+    "lexique": ["coq", "symbole officiel", "Constitution"],
+    "portes_entree": ["contraste", "image", "mot_declencheur", "definition"],
+    "erreurs_typiques": [
+      { "texte": "Le coq est inscrit dans la Constitution", "frequence_estimee": 0.6, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "DRAPEAU_01", "frontiere": "Le drapeau est un symbole officiel. Le coq ne l'est pas." }
+    ],
+    "contre_exemples": [
+      "Le drapeau tricolore, inscrit dans la Constitution",
+      "La devise, inscrite dans la Constitution"
+    ],
+    "cas_limites": [
+      "Le coq figure sur les maillots sportifs français",
+      "Le coq apparaît sur d'anciennes pièces de monnaie"
+    ],
+    "scenarios": ["rue", "ecole"],
+    "ancrage_spatial": ["stade"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Que représente le coq ?",
+      "Le coq est-il un symbole officiel de la France ?",
+      "Lequel de ces symboles n'a PAS de statut officiel dans la Constitution ?",
+      "Depuis quand le coq est-il utilisé comme symbole ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Le coq représente la France, mais il n'est pas dans la Constitution.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/maillot-coq.jpg", "lieu": "/images/lieux/stade.jpg" }
+  },
+  {
+    "id": "LANGUE_OFFICIELLE_01",
+    "thematique": "valeurs",
+    "nature": "fait_arbitraire",
+    "nom_affiche": "la langue officielle",
+    "pourquoi_ca_existe": "Pour que tous les documents officiels soient compris de la même façon.",
+    "definition_simple": "La langue officielle de la France est le français.",
+    "definition_officielle": "La langue officielle de la République est le français. De plus, la France a une seule langue officielle.",
+    "lexique": ["langue officielle", "administration"],
+    "portes_entree": ["document", "situation", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "La France a plusieurs langues officielles", "frequence_estimee": 0.4, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [],
+    "contre_exemples": [],
+    "cas_limites": [],
+    "scenarios": ["mairie", "prefecture"],
+    "ancrage_spatial": ["guichet_service_public"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Quelle est la langue officielle de la France ?",
+      "Combien de langues officielles la France a-t-elle ?",
+      "Peut-on parler une autre langue que le français en France ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "En France, la langue officielle est le français.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/formulaire.jpg", "lieu": "/images/lieux/prefecture.jpg" }
+  },
+  {
+    "id": "DDHC_01",
+    "thematique": "valeurs",
+    "nature": "fait_arbitraire",
+    "nom_affiche": "la Déclaration des droits de l'homme et du citoyen",
+    "pourquoi_ca_existe": "Pour écrire les droits que personne ne peut retirer.",
+    "definition_simple": "C'est un texte de 1789 qui dit les droits de chaque personne.",
+    "definition_officielle": "La Déclaration des droits de l'homme et du citoyen (DDHC) de 1789 proclame à son article 4 que la liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui.",
+    "lexique": ["DDHC", "déclaration", "droits"],
+    "portes_entree": ["lieu", "document", "mot_declencheur", "definition"],
+    "erreurs_typiques": [
+      { "texte": "La DDHC date de 1958", "frequence_estimee": 0.5, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "CONSTITUTION_01", "frontiere": "La DDHC date de 1789 et dit les droits. La Constitution date de 1958 et organise les pouvoirs." }
+    ],
+    "contre_exemples": [],
+    "cas_limites": [],
+    "scenarios": ["ecole", "mairie"],
+    "ancrage_spatial": ["plaque_commemorative"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Qu'est-ce que la DDHC ?",
+      "En quelle année la Déclaration des droits de l'homme a-t-elle été écrite ?",
+      "Que signifie l'abréviation DDHC ?",
+      "Quel texte de 1789 proclame les libertés fondamentales ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Un texte de 1789 qui dit les droits de chacun.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/plaque-ddhc.jpg", "lieu": "/images/lieux/mairie-facade.jpg" }
+  },
+  {
+    "id": "ARTICLE_PREMIER_01",
+    "thematique": "valeurs",
+    "nature": "fait_arbitraire",
+    "nom_affiche": "les quatre principes de la République",
+    "pourquoi_ca_existe": "Pour dire en une phrase ce qu'est la République française.",
+    "definition_simple": "La France est indivisible, laïque, démocratique et sociale.",
+    "definition_officielle": "L'article 1er de la Constitution du 4 octobre 1958 précise que « La France est une République indivisible, laïque, démocratique et sociale ».",
+    "lexique": ["indivisible", "laïque", "démocratique", "sociale"],
+    "portes_entree": ["document", "definition", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "Indivisible, laïque, démocratique et libre", "frequence_estimee": 0.5, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [],
+    "contre_exemples": [],
+    "cas_limites": [],
+    "scenarios": ["mairie"],
+    "ancrage_spatial": ["mairie"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": ["CONSTITUTION_01"],
+    "formulations_examen": [
+      "Que dit l'article 1er de la Constitution ?",
+      "Quels sont les quatre principes de la République ?",
+      "Complétez : « La France est une République indivisible, laïque, … et … »",
+      "Combien de principes définissent la République française ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Quatre mots décrivent la France : indivisible, laïque, démocratique, sociale.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/constitution-texte.jpg", "lieu": "/images/lieux/mairie-facade.jpg" }
   }
 ]
