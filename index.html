@@ -51,6 +51,7 @@
      * @param {Function} auContinuer - Appelée quand l'apprenant clique sur "Continuer".
      */
     function afficherCadrage(notion, conteneur, auContinuer) {
+      window.scrollTo(0, 0);
       conteneur.textContent = "";
       conteneur.className = "ecran-microjeu ecran-cadrage";
 
@@ -95,6 +96,7 @@
      * @param {HTMLElement} conteneur
      */
     function afficherRetour(notion, angle, reussite, conteneur) {
+      window.scrollTo(0, 0);
       const texte = retourApresReponse(angle, reussite);
       if (!texte) {
         console.error("Impossible d'afficher le retour : le texte attendu est manquant dans l'angle.");
@@ -125,6 +127,7 @@
      * @param {HTMLElement} conteneur
      */
     function afficherRevelation(notion, conteneur) {
+      window.scrollTo(0, 0);
       conteneur.textContent = "";
       conteneur.className = "ecran-microjeu ecran-revelation";
 
@@ -265,6 +268,7 @@
      * @param {HTMLElement} conteneur
      */
     function afficherCloture(conteneur) {
+      window.scrollTo(0, 0);
       conteneur.textContent = "";
       conteneur.className = "ecran-microjeu ecran-cloture";
 
@@ -305,11 +309,24 @@
       bouton.type = "button";
       bouton.className = "cloture-bouton-terminer";
       bouton.textContent = "Terminer";
-      bouton.addEventListener("click", () => {
-        conteneur.textContent = "";
-        conteneur.className = "";
-      });
+      bouton.addEventListener("click", () => afficherEcranFinal(conteneur));
       conteneur.appendChild(bouton);
+    }
+
+    /**
+     * Affiche l'écran final, après le clic sur "Terminer" de l'écran de clôture : un simple
+     * message d'au revoir, sans bouton ni score (sections 5.6 et 7.4).
+     * @param {HTMLElement} conteneur
+     */
+    function afficherEcranFinal(conteneur) {
+      window.scrollTo(0, 0);
+      conteneur.textContent = "";
+      conteneur.className = "ecran-microjeu ecran-final";
+
+      const texte = document.createElement("p");
+      texte.className = "final-texte";
+      texte.textContent = "À bientôt.";
+      conteneur.appendChild(texte);
     }
 
     /**

@@ -422,6 +422,82 @@ button {
   background-color: var(--couleur-bouton-fond-actif);
 }
 
+/* ==========================================================================
+   Écran de clôture (section 7.4)
+   Un acquis nommé, jamais un score. Titre calme, pas triomphal ; aucune
+   couleur de fête ni encadré célébratoire.
+   ========================================================================== */
+
+.ecran-cloture {
+  justify-content: center;
+  text-align: left;
+}
+
+.cloture-titre {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--couleur-texte);
+}
+
+.cloture-sous-titre {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--couleur-texte-attenue);
+}
+
+/* Sans puces : chaque ligne porte déjà son ✓ dans le texte (section 7.4). */
+.cloture-liste-acquis {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-s);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Seul le vert sémantique (acquis, section 6) colore cet écran. */
+.cloture-acquis-item {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--couleur-acquis);
+}
+
+.cloture-bouton-terminer {
+  width: 100%;
+  min-height: 48px;
+  padding: var(--espace-xs) var(--espace-s);
+  background-color: var(--couleur-bouton-fond);
+  border: 2px solid var(--couleur-bouton-bordure);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cloture-bouton-terminer:hover,
+.cloture-bouton-terminer:focus-visible {
+  background-color: var(--couleur-bouton-fond-actif);
+}
+
+/* ==========================================================================
+   Écran final ("À bientôt.")
+   Point final de la session, pas un message : centré, sobre, très aéré.
+   ========================================================================== */
+
+.ecran-final {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.final-texte {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--couleur-texte-attenue);
+}
+
 /* --------------------------------------------------------------------------
    Confort de lecture sur écrans plus larges.
    Mobile reste la référence : ce bloc ne fait qu'ajouter de la

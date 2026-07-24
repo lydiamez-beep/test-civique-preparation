@@ -173,6 +173,8 @@ function creerMessageAvantReponse() {
  * @param {Object} callbacks - { onReponse(porte, reussite, temps), onIncomprehension() }
  */
 function afficherDetective(notion, item, conteneur, callbacks) {
+  window.scrollTo(0, 0);
+
   // Horodatage de départ pour mesurer le temps de réponse — jamais affiché (section 10).
   const debut = Date.now();
 
