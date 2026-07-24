@@ -181,7 +181,7 @@ function afficherDetective(notion, item, conteneur, callbacks) {
   const porte = "situation";
 
   conteneur.textContent = "";
-  conteneur.classList.add("ecran-microjeu", "detective");
+  conteneur.className = "ecran-microjeu detective";
 
   conteneur.appendChild(creerBoutonQuitter(callbacks));
   conteneur.appendChild(creerCadreSituationnel(notion.scenarios[0]));
