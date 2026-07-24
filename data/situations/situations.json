@@ -290,5 +290,18 @@
   { "id": "SIT_PAIE_02", "titre": "La ligne retraite", "lieu": "travail", "acteurs": ["salarie"], "recit": ["Sur votre fiche de paie, une ligne s'appelle « retraite ».", "Vous avez trente ans.", "Vous ne partirez pas à la retraite avant longtemps."], "image": "/images/situations/fiche-paie.jpg", "charge_affective": "basse" },
   { "id": "SIT_MAIRIE_04", "titre": "Deux demandes à la mairie", "lieu": "mairie", "acteurs": ["maire", "associations"], "recit": ["Une association demande de l'argent pour construire un lieu de culte.", "Une autre demande de l'argent pour réparer le toit d'une vieille église classée.", "Le maire doit répondre aux deux."], "image": "/images/situations/mairie-guichet.jpg", "charge_affective": "haute" },
   { "id": "SIT_GUICHET_01", "titre": "Une demande particulière", "lieu": "mairie", "acteurs": ["usager", "agent_public"], "recit": ["Un usager demande à être reçu par un agent d'une religion précise.", "L'agent au guichet écoute la demande."], "image": "/images/situations/guichets-mairie.jpg", "charge_affective": "haute" },
-  { "id": "SIT_MUR_01", "titre": "Le mur du hall", "lieu": "mairie", "acteurs": ["habitant"], "recit": ["Dans le hall de la mairie, un mur porte plusieurs affiches.", "On y voit le drapeau français et le portrait du président.", "Quelqu'un propose d'ajouter l'affiche d'un parti politique."], "image": "/images/situations/mur-mairie.jpg", "charge_affective": "haute" }
+  { "id": "SIT_MUR_01", "titre": "Le mur du hall", "lieu": "mairie", "acteurs": ["habitant"], "recit": ["Dans le hall de la mairie, un mur porte plusieurs affiches.", "On y voit le drapeau français et le portrait du président.", "Quelqu'un propose d'ajouter l'affiche d'un parti politique."], "image": "/images/situations/mur-mairie.jpg", "charge_affective": "haute" },
+  {
+    "id": "SIT_CEREMONIE_01",
+    "titre": "Une cérémonie au stade",
+    "lieu": "stade",
+    "acteurs": ["public"],
+    "recit": [
+      "Avant le match de l'équipe de France, tout le monde se lève.",
+      "Une musique commence.",
+      "Une partie du public chante."
+    ],
+    "image": "/images/situations/stade-hymne.jpg",
+    "charge_affective": "basse"
+  }
 ]

@@ -209,6 +209,20 @@ Une situation peut être bâtie de plusieurs façons. Varier ces structures évi
 
 **Règle d'équilibre :** dans un lot de cinq situations, pas plus de deux comparaisons. La comparaison rend les frontières visibles, mais un corpus qui n'en contient que produirait un apprenant entraîné à repérer des différences plutôt qu'à récupérer des notions.
 
+**Grille de contrôle d'une situation**
+
+Une situation peut être correcte sur le fond et sonner fausse à la lecture. Cinq contrôles avant validation :
+
+| # | Contrôle | Question à se poser |
+|---|---|---|
+| 1 | Plausibilité | Un adulte pourrait-il réellement vivre cette scène ? Les personnages parlent-ils naturellement ? |
+| 2 | Nature du manque | Le manque est-il dans le monde de l'histoire, ou fabriqué pour faire deviner ? |
+| 3 | Qualité de la question | La question découle-t-elle de la situation ? La situation donne-t-elle déjà la réponse ? |
+| 4 | Niveau de langue | Les phrases ressemblent-elles à de vraies phrases du quotidien, ou à des formulations scolaires déguisées en dialogue ? |
+| 5 | Public adulte | La scène parle-t-elle à un adulte en démarche d'intégration ? |
+
+**Le signe qui doit alerter :** un personnage qui énonce une information dont il n'aurait aucune raison de parler. Si un enfant dit « tous les enfants de France apprennent cette chanson », ce n'est pas l'enfant qui parle, c'est le rédacteur. Le manque doit exister dans la tête de celui qui observe la scène, pas dans une réplique fabriquée.
+
 **Règles de validation :**
 
 | Champ | Règle |
