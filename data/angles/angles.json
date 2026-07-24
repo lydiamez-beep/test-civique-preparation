@@ -162,17 +162,6 @@
     "feedback_erreur": "Le 1er mai est aussi un jour férié, mais il n'y a ni drapeaux ni cérémonie officielle. Le 14 juillet, des feux d'artifice sont organisés le soir."
   },
   {
-    "id": "ANGLE_ECOLE_03_HYMNE",
-    "situation": "SIT_ECOLE_03",
-    "notion": "HYMNE_01",
-    "role": "ancrage",
-    "question": "Quelle chanson apprennent tous les enfants de France ?",
-    "reponse_correcte": "La Marseillaise",
-    "reponse_incorrecte": "La Parisienne",
-    "explication_courte": "C'est le chant du pays, appris à l'école primaire.",
-    "feedback_erreur": "La Parisienne n'existe pas comme chant national. Le chant appris par tous les enfants s'appelle La Marseillaise."
-  },
-  {
     "id": "ANGLE_MAIRIE_03_MARIANNE",
     "situation": "SIT_MAIRIE_03",
     "notion": "MARIANNE_01",

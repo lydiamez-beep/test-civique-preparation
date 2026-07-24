@@ -192,15 +192,6 @@
     "charge_affective": "basse"
   },
   {
-    "id": "SIT_ECOLE_03",
-    "titre": "Une chanson à l'école",
-    "lieu": "ecole",
-    "acteurs": ["parent", "enfant"],
-    "recit": ["Votre fils rentre de l'école primaire.", "Il chante une chanson apprise en classe.", "Il dit que tous les enfants de France l'apprennent."],
-    "image": "/images/situations/ecole-classe.jpg",
-    "charge_affective": "basse"
-  },
-  {
     "id": "SIT_MAIRIE_03",
     "titre": "Le buste dans le hall",
     "lieu": "mairie",

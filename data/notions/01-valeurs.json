@@ -511,8 +511,8 @@
     "notions_voisines": [],
     "contre_exemples": [],
     "cas_limites": [],
-    "scenarios": ["ecole"],
-    "ancrage_spatial": ["ecole_primaire"],
+    "scenarios": ["stade", "ecole"],
+    "ancrage_spatial": ["stade"],
     "parcours_narratifs": { "principal": "P_ECOLE", "secondaires": [] },
     "prerequis": [],
     "formulations_examen": [
@@ -526,7 +526,7 @@
     "formulation_simplifiee": "Le chant de la France s'appelle La Marseillaise.",
     "charge_affective": "basse",
     "cadrage_factuel": "",
-    "images": { "situation": "/images/situations/ecole-classe.jpg", "lieu": "/images/lieux/ecole-primaire.jpg" }
+    "images": { "situation": "/images/situations/stade-hymne.jpg", "lieu": "/images/lieux/stade.jpg" }
   },
   {
     "id": "MARIANNE_01",
