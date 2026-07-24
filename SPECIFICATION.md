@@ -194,6 +194,21 @@ Une situation ne joue pas le même rôle selon ce qu'elle sert. Elle n'a pas bes
 
 **Règle de suffisance :** une situation est assez longue quand elle active la porte d'entrée visée, et pas plus. Aucune longueur minimale n'est imposée. Une situation de deux phrases peut être complète ; une situation de six phrases peut être inutilement chargée.
 
+**Structures de situation**
+
+Une situation peut être bâtie de plusieurs façons. Varier ces structures évite que le corpus n'entraîne une seule opération mentale.
+
+| Structure | Principe | Exemple |
+|---|---|---|
+| Comparaison | Deux cas identiques sauf un détail | Deux dossiers de location, seul le nom change |
+| Décision | Un acteur doit trancher | Le maire doit répondre à une demande de financement |
+| Lieu | Un lieu porte l'information | Trois mots gravés sur le fronton d'une mairie |
+| Erreur | Quelqu'un affirme une chose fausse | Un passant dit que le foulard est interdit en France |
+| Document | Un papier déclenche la question | Une ligne de cotisation sur une fiche de paie |
+| Conversation | Deux personnes ne sont pas d'accord | Un collègue affirme que critiquer une religion est interdit |
+
+**Règle d'équilibre :** dans un lot de cinq situations, pas plus de deux comparaisons. La comparaison rend les frontières visibles, mais un corpus qui n'en contient que produirait un apprenant entraîné à repérer des différences plutôt qu'à récupérer des notions.
+
 **Règles de validation :**
 
 | Champ | Règle |
@@ -243,8 +258,13 @@ Exemple :
 |---|---|---|
 | `ancrage` | La situation fournit un contexte de récupération, sans jugement à porter | 1, 5 |
 | `application` | La situation est un cas typique de la notion | 1, 4 |
+| `contraste` | La situation oppose deux règles qui s'appliquent différemment selon le contexte | 3, 4 |
 | `illustration` | La situation rend la notion visible sans la tester | 2 |
 | `discrimination` | La situation oblige à distinguer deux notions voisines | 3 |
+
+> **`contraste` et `discrimination` ne sont pas la même opération.**
+> `discrimination` distingue deux notions concurrentes : est-ce la laïcité ou la liberté de conscience qui s'applique ici ?
+> `contraste` oppose deux applications d'une même règle selon le contexte : la même personne, le même signe, deux employeurs différents.
 
 **Les deux retours ne font pas le même travail :**
 
@@ -269,7 +289,7 @@ Cette règle est vérifiable automatiquement : les termes interdits se déduisen
 |---|---|
 | `situation` | Doit référencer une situation existante |
 | `notion` | Doit référencer une notion existante |
-| `role` | `ancrage`, `application`, `illustration` ou `discrimination` |
+| `role` | `ancrage`, `application`, `contraste`, `illustration` ou `discrimination` |
 | `question` | Porte sur la situation, jamais sur la définition. Interdit : « Qu'est-ce que X ? » Pour `role: ancrage`, la question demande de récupérer une information à partir du contexte. |
 | `reponse_correcte` | Un verdict, pas un principe |
 | `explication_courte` | Soumise à L5 |

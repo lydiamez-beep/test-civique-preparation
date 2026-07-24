@@ -50,5 +50,60 @@
 
     "explication_courte": "Pour cette élection, il faut être français.",
     "feedback_erreur": "Beaucoup pensent qu'il suffit de vivre en France depuis longtemps. Pour l'élection du président, il faut la nationalité française. Pour les élections de la commune, un citoyen d'un pays de l'Union européenne peut voter."
+  },
+  {
+    "id": "ANGLE_LOGEMENT_01_DISCRIMINATION",
+    "situation": "SIT_LOGEMENT_01",
+    "notion": "DISCRIMINATION_01",
+    "role": "application",
+    "question": "Le propriétaire a-t-il le droit de choisir ainsi ?",
+    "reponse_correcte": "Non",
+    "reponse_incorrecte": "Oui",
+    "explication_courte": "Les deux dossiers sont identiques. Seul le nom a fait la différence.",
+    "feedback_erreur": "Beaucoup pensent qu'un propriétaire choisit librement. C'est vrai s'il regarde les revenus ou le travail. C'est interdit s'il regarde l'origine du nom."
+  },
+  {
+    "id": "ANGLE_RUE_01_CONSCIENCE",
+    "situation": "SIT_RUE_01",
+    "notion": "LIBERTE_CONSCIENCE_01",
+    "role": "application",
+    "question": "La mairie peut-elle interdire ce rassemblement ?",
+    "reponse_correcte": "Oui",
+    "reponse_incorrecte": "Non",
+    "explication_courte": "Ce n'est pas la prière qui pose problème, c'est la rue bloquée.",
+    "feedback_erreur": "Croire est totalement libre. Se réunir pour prier l'est aussi. Mais quand la rue est bloquée, la mairie peut demander de se déplacer ou d'obtenir une autorisation."
+  },
+  {
+    "id": "ANGLE_TRAVAIL_01_PUBLIC_PRIVE",
+    "situation": "SIT_TRAVAIL_01",
+    "notion": "TRAVAIL_PUBLIC_PRIVE_01",
+    "role": "contraste",
+    "question": "Suivent-elles la même règle au travail ?",
+    "reponse_correcte": "Non",
+    "reponse_incorrecte": "Oui",
+    "explication_courte": "Celle du magasin peut garder son foulard. Celle de la mairie doit le retirer pendant son service.",
+    "feedback_erreur": "Beaucoup pensent que la règle est la même partout. Elle dépend de l'employeur : dans un service public, on ne montre pas sa religion ; dans une entreprise privée, on le peut, sauf raison précise."
+  },
+  {
+    "id": "ANGLE_MARCHE_01_ESPACE_PUBLIC",
+    "situation": "SIT_MARCHE_01",
+    "notion": "ESPACE_PUBLIC_01",
+    "role": "application",
+    "question": "Le passant a-t-il raison ?",
+    "reponse_correcte": "Non",
+    "reponse_incorrecte": "Oui",
+    "explication_courte": "Ici, personne ne contrôle ce que portent les gens.",
+    "feedback_erreur": "Cette idée est très répandue, y compris chez des personnes nées en France. La règle de discrétion existe pour ceux qui travaillent dans un service public, pas pour les gens dans la rue."
+  },
+  {
+    "id": "ANGLE_ECOLE_01_LAICITE",
+    "situation": "SIT_ECOLE_01",
+    "notion": "ECOLE_LAICITE_01",
+    "role": "contraste",
+    "question": "Le collège traitera-t-il les deux élèves de la même manière ?",
+    "reponse_correcte": "Non",
+    "reponse_incorrecte": "Oui",
+    "explication_courte": "Le grand foulard se voit tout de suite. La petite croix sous le pull, non.",
+    "feedback_erreur": "La règle de l'école ne porte pas sur la religion elle-même, mais sur ce qui se voit immédiatement. Un signe discret reste autorisé."
   }
 ]

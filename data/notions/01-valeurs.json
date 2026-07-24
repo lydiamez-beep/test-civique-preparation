@@ -152,5 +152,224 @@
     "charge_affective": "basse",
     "cadrage_factuel": "",
     "images": { "situation": "/images/situations/fronton-mairie.jpg", "lieu": "/images/lieux/mairie-facade.jpg" }
+  },
+  {
+    "id": "DISCRIMINATION_01",
+    "thematique": "valeurs",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "la discrimination",
+    "pourquoi_ca_existe": "Pour que personne ne soit traité moins bien à cause de ce qu'il est.",
+    "definition_simple": "Traiter une personne moins bien à cause de son origine, son sexe, sa religion ou son âge.",
+    "definition_officielle": "Une discrimination est le fait de traiter différemment une personne par rapport à une autre, dans une situation comparable, en raison de son origine, de son sexe, de son orientation sexuelle, de son opinion politique, de son âge, de ses convictions religieuses ou de son apparence physique.",
+    "lexique": ["discrimination", "situation comparable", "critère"],
+    "portes_entree": ["situation", "contraste", "mot_declencheur", "definition"],
+    "erreurs_typiques": [
+      { "texte": "Toute différence de traitement est une discrimination", "frequence_estimee": 0.7, "frequence_affichee": "eleve" },
+      { "texte": "Une entreprise privée peut choisir qui elle veut", "frequence_estimee": 0.5, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "EGALITE_01", "frontiere": "L'égalité est le principe. La discrimination est ce qui le viole." }
+    ],
+    "contre_exemples": [
+      "Un employeur écarte un candidat qui n'a pas le diplôme requis",
+      "Un propriétaire refuse un locataire dont les revenus sont trop faibles"
+    ],
+    "cas_limites": [
+      "Une offre d'emploi exige un français parfait pour un poste sans contact avec le public",
+      "Un club sportif réserve un tarif réduit aux plus de 65 ans"
+    ],
+    "scenarios": ["logement", "travail"],
+    "ancrage_spatial": ["agence_immobiliere", "entretien_embauche"],
+    "parcours_narratifs": { "principal": "P_LOGEMENT", "secondaires": ["P_TRAVAIL"] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Qu'est-ce qu'une discrimination ?",
+      "Quels sont les critères de discrimination interdits ?",
+      "Les discriminations sont-elles punies en France ?",
+      "Quand une différence de traitement devient-elle une discrimination ?",
+      "Dans quels domaines une discrimination peut-elle avoir lieu ?",
+      "Un employeur refuse un candidat sans le diplôme requis. Est-ce une discrimination ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Traiter quelqu'un moins bien à cause de ce qu'il est.",
+    "charge_affective": "haute",
+    "cadrage_factuel": "Voici ce que dit la loi française.",
+    "images": { "situation": "/images/situations/deux-dossiers.jpg", "lieu": "/images/lieux/agence-immobiliere.jpg" }
+  },
+  {
+    "id": "LIBERTE_CONSCIENCE_01",
+    "thematique": "valeurs",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "la liberté de conscience",
+    "pourquoi_ca_existe": "Pour que chacun soit libre de croire ou de ne pas croire.",
+    "definition_simple": "Chacun pense ce qu'il veut. Montrer ce qu'on pense a parfois des limites.",
+    "definition_officielle": "Nul ne doit être inquiété pour ses opinions, même religieuses, pourvu que leur manifestation ne trouble pas l'ordre public établi par la loi.",
+    "lexique": ["conscience", "conviction", "manifestation", "ordre public"],
+    "portes_entree": ["situation", "contraste", "definition", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "En France, on peut tout faire au nom de sa religion", "frequence_estimee": 0.6, "frequence_affichee": "moyen" },
+      { "texte": "L'État peut interdire de croire", "frequence_estimee": 0.3, "frequence_affichee": "faible" }
+    ],
+    "notions_voisines": [
+      { "id": "LAICITE_01", "frontiere": "La liberté de conscience protège la personne. La laïcité oblige l'État." }
+    ],
+    "contre_exemples": [
+      "Une personne change de religion",
+      "Une personne dit qu'elle ne croit en rien"
+    ],
+    "cas_limites": [
+      "Une prière bloque la circulation d'une rue",
+      "Un rassemblement religieux se tient sans autorisation"
+    ],
+    "scenarios": ["domicile", "rue", "travail"],
+    "ancrage_spatial": ["rue"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Qu'est-ce que la liberté de conscience ?",
+      "Peut-on changer de religion en France ?",
+      "Peut-on ne pas avoir de religion en France ?",
+      "Peut-on avoir les opinions religieuses de son choix en France ?",
+      "Jusqu'où peut-on manifester ses convictions ?",
+      "Qu'est-ce qui limite la manifestation d'une opinion religieuse ?",
+      "Qu'est-ce qui n'est PAS protégé : l'opinion ou sa manifestation ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Chacun croit ce qu'il veut.",
+    "charge_affective": "haute",
+    "cadrage_factuel": "Voici ce que dit la loi française. Chacun garde ses convictions personnelles.",
+    "images": { "situation": "/images/situations/rue-priere.jpg", "lieu": "/images/lieux/rue.jpg" }
+  },
+  {
+    "id": "TRAVAIL_PUBLIC_PRIVE_01",
+    "thematique": "valeurs",
+    "nature": "norme",
+    "nom_affiche": "la religion au travail",
+    "pourquoi_ca_existe": "Pour que l'État reste neutre, sans imposer cette règle à toutes les entreprises.",
+    "definition_simple": "L'agent public ne montre pas sa religion au travail. Le salarié privé le peut, sauf raison précise.",
+    "definition_officielle": "Les agents publics ne peuvent pas porter de signes religieux au travail. Les salariés des entreprises privées ont le droit d'exprimer leurs opinions religieuses, sauf si cela perturbe le bon fonctionnement de l'entreprise ou pour des raisons de sécurité.",
+    "lexique": ["agent public", "salarié", "règlement intérieur", "entreprise privée"],
+    "portes_entree": ["situation", "contraste", "lieu", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "En France, on ne peut pas porter de signe religieux au travail", "frequence_estimee": 0.8, "frequence_affichee": "eleve" },
+      { "texte": "Un employeur privé peut tout interdire", "frequence_estimee": 0.5, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "AGENT_USAGER_01", "frontiere": "L'agent public est toujours neutre. Le salarié privé est libre sauf exception justifiée." }
+    ],
+    "contre_exemples": [
+      "Une vendeuse porte un foulard dans une boutique",
+      "Un employeur refuse un congé pour nécessité de service"
+    ],
+    "cas_limites": [
+      "Une entreprise privée gère la cantine d'une école publique",
+      "Un règlement intérieur interdit tout signe religieux à tous les postes"
+    ],
+    "scenarios": ["entreprise", "mairie"],
+    "ancrage_spatial": ["boutique", "bureau"],
+    "parcours_narratifs": { "principal": "P_TRAVAIL", "secondaires": [] },
+    "prerequis": ["AGENT_USAGER_01"],
+    "formulations_examen": [
+      "Un salarié d'entreprise privée peut-il porter un signe religieux ?",
+      "Un fonctionnaire peut-il porter un signe religieux au travail ?",
+      "Un employeur privé peut-il interdire les signes religieux ?",
+      "Dans quel cas un employeur peut-il limiter le port de signes religieux ?",
+      "Peut-on demander un jour de congé pour une fête religieuse ?",
+      "Quelle différence entre un agent public et un salarié du privé en matière de laïcité ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Le travail à la mairie et le travail dans un magasin ne suivent pas la même règle.",
+    "charge_affective": "haute",
+    "cadrage_factuel": "Voici ce que dit la loi française. Chacun garde ses convictions personnelles.",
+    "images": { "situation": "/images/situations/boutique-vendeuse.jpg", "lieu": "/images/lieux/commerce.jpg" }
+  },
+  {
+    "id": "ESPACE_PUBLIC_01",
+    "thematique": "valeurs",
+    "nature": "norme",
+    "nom_affiche": "la religion dans l'espace public",
+    "pourquoi_ca_existe": "Pour que chacun vive sa religion dehors, sans gêner les autres.",
+    "definition_simple": "Dans la rue, chacun peut montrer sa religion.",
+    "definition_officielle": "En France, toute personne a le droit de montrer sa religion dans l'espace public : rues, parcs et jardins publics, marchés, transports. Cependant, le respect de l'ordre public est indispensable.",
+    "lexique": ["espace public", "ordre public", "signe religieux"],
+    "portes_entree": ["situation", "lieu", "contraste", "image"],
+    "erreurs_typiques": [
+      { "texte": "En France, on ne peut pas porter de signe religieux dans la rue", "frequence_estimee": 0.7, "frequence_affichee": "eleve" },
+      { "texte": "On peut se couvrir entièrement le visage dans la rue", "frequence_estimee": 0.4, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "AGENT_USAGER_01", "frontiere": "Dans la rue, tout le monde est libre. Dans un service public, les agents sont neutres." }
+    ],
+    "contre_exemples": [
+      "Une personne porte un voile pour faire ses courses",
+      "Une personne porte une croix visible dans le métro"
+    ],
+    "cas_limites": [
+      "Une personne porte un voile intégral dans la rue",
+      "Une procession religieuse traverse une place le jour du marché"
+    ],
+    "scenarios": ["rue", "marche", "transports"],
+    "ancrage_spatial": ["marche", "rue"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": ["LAICITE_01"],
+    "formulations_examen": [
+      "Peut-on porter un signe religieux dans la rue ?",
+      "Qu'est-ce que l'espace public ?",
+      "Peut-on porter un voile au marché ?",
+      "Une prière de rue peut-elle être interdite ?",
+      "Que dit la loi du 11 octobre 2010 ?",
+      "Peut-on porter un voile intégral dans la rue ?",
+      "Qu'est-ce qui est interdit dans l'espace public depuis 2010 ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Dans la rue, chacun est libre de montrer sa religion.",
+    "charge_affective": "haute",
+    "cadrage_factuel": "Voici ce que dit la loi française. Chacun garde ses convictions personnelles.",
+    "images": { "situation": "/images/situations/marche.jpg", "lieu": "/images/lieux/marche.jpg" }
+  },
+  {
+    "id": "ECOLE_LAICITE_01",
+    "thematique": "valeurs",
+    "nature": "norme",
+    "nom_affiche": "la laïcité à l'école",
+    "pourquoi_ca_existe": "Pour que les élèves puissent penser librement, sans pression.",
+    "definition_simple": "À l'école publique, les élèves ne portent pas de signe religieux qui se voit tout de suite.",
+    "definition_officielle": "Il est interdit de porter un signe ou un vêtement qui montre sa religion de manière ostensible, c'est-à-dire que l'on peut voir immédiatement. Les signes discrets sont autorisés.",
+    "lexique": ["ostensible", "discret", "établissement scolaire", "charte"],
+    "portes_entree": ["situation", "lieu", "contraste", "definition"],
+    "erreurs_typiques": [
+      { "texte": "À l'école, toute religion est interdite", "frequence_estimee": 0.7, "frequence_affichee": "eleve" },
+      { "texte": "À l'école, c'est comme dans la rue", "frequence_estimee": 0.5, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "ESPACE_PUBLIC_01", "frontiere": "Dans la rue, tous les signes sont autorisés. À l'école publique, seuls les signes discrets le sont." }
+    ],
+    "contre_exemples": [
+      "Une élève porte une petite croix sous son pull",
+      "Deux élèves parlent de leur religion dans la cour"
+    ],
+    "cas_limites": [
+      "Un bandeau large porté dans une intention religieuse",
+      "Un parent accompagne une sortie scolaire en portant un foulard"
+    ],
+    "scenarios": ["ecole"],
+    "ancrage_spatial": ["ecole_publique"],
+    "parcours_narratifs": { "principal": "P_ECOLE", "secondaires": [] },
+    "prerequis": ["ESPACE_PUBLIC_01"],
+    "formulations_examen": [
+      "Peut-on porter un signe religieux à l'école publique ?",
+      "Que dit la loi du 15 mars 2004 ?",
+      "Que signifie « ostensible » ?",
+      "Un élève peut-il porter une petite croix sous son pull ?",
+      "Un professeur peut-il porter un signe religieux ?",
+      "Un élève peut-il refuser un cours pour des raisons religieuses ?",
+      "Qu'est-ce que la Charte de la laïcité à l'École ?",
+      "Qu'est-ce qui n'est PAS autorisé à l'école publique ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "À l'école, on ne porte pas de signe religieux qui se voit tout de suite.",
+    "charge_affective": "haute",
+    "cadrage_factuel": "Voici ce que dit la loi française. Chacun garde ses convictions personnelles.",
+    "images": { "situation": "/images/situations/college-entree.jpg", "lieu": "/images/lieux/ecole-fronton.jpg" }
   }
 ]

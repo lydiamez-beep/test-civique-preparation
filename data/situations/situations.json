@@ -59,5 +59,70 @@
 
     "image": "/images/situations/bureau-vote.jpg",
     "charge_affective": "basse"
+  },
+  {
+    "id": "SIT_LOGEMENT_01",
+    "titre": "Deux dossiers de location",
+    "lieu": "agence_immobiliere",
+    "acteurs": ["proprietaire", "candidats"],
+    "recit": [
+      "Deux personnes veulent louer le même appartement.",
+      "Elles ont le même salaire et le même travail.",
+      "Le propriétaire choisit l'un des dossiers à cause du nom du candidat."
+    ],
+    "image": "/images/situations/deux-dossiers.jpg",
+    "charge_affective": "haute"
+  },
+  {
+    "id": "SIT_RUE_01",
+    "titre": "Une prière dans la rue",
+    "lieu": "rue",
+    "acteurs": ["groupe", "passants"],
+    "recit": [
+      "Un groupe se réunit pour prier dans une rue étroite.",
+      "Les voitures ne peuvent plus passer.",
+      "Les piétons doivent marcher sur la route."
+    ],
+    "image": "/images/situations/rue-priere.jpg",
+    "charge_affective": "haute"
+  },
+  {
+    "id": "SIT_TRAVAIL_01",
+    "titre": "Deux sœurs, deux emplois",
+    "lieu": "entreprise",
+    "acteurs": ["salariee", "agente_publique"],
+    "recit": [
+      "Deux sœurs portent un foulard.",
+      "L'une travaille dans un magasin de vêtements.",
+      "L'autre travaille au guichet de la mairie."
+    ],
+    "image": "/images/situations/boutique-vendeuse.jpg",
+    "charge_affective": "haute"
+  },
+  {
+    "id": "SIT_MARCHE_01",
+    "titre": "Au marché",
+    "lieu": "marche",
+    "acteurs": ["habitante"],
+    "recit": [
+      "Une femme fait ses courses au marché.",
+      "Elle porte un foulard.",
+      "Un passant lui dit que c'est interdit en France."
+    ],
+    "image": "/images/situations/marche.jpg",
+    "charge_affective": "haute"
+  },
+  {
+    "id": "SIT_ECOLE_01",
+    "titre": "Devant le collège",
+    "lieu": "ecole",
+    "acteurs": ["eleve", "eleve"],
+    "recit": [
+      "Deux élèves entrent au collège public.",
+      "L'une porte un grand foulard sur la tête.",
+      "L'autre porte une petite croix sous son pull."
+    ],
+    "image": "/images/situations/college-entree.jpg",
+    "charge_affective": "haute"
   }
 ]
