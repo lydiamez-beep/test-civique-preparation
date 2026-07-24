@@ -371,5 +371,128 @@
     "charge_affective": "haute",
     "cadrage_factuel": "Voici ce que dit la loi française. Chacun garde ses convictions personnelles.",
     "images": { "situation": "/images/situations/college-entree.jpg", "lieu": "/images/lieux/ecole-fronton.jpg" }
+  },
+  {
+    "id": "SOLIDARITE_01",
+    "thematique": "valeurs",
+    "nature": "systeme_relationnel",
+    "nom_affiche": "la solidarité",
+    "pourquoi_ca_existe": "Pour payer les services publics dont tout le monde profite.",
+    "definition_simple": "Chacun donne une partie de son argent. Cet argent sert à tous.",
+    "definition_officielle": "Le principe de solidarité signifie que la Nation assure aux individus une protection. Remplir ses obligations fiscales est un acte solidaire qui permet de financer les services publics au bénéfice de tous.",
+    "lexique": ["cotisation", "solidarité", "services publics", "Sécurité sociale"],
+    "portes_entree": ["situation", "document", "mot_declencheur", "definition"],
+    "erreurs_typiques": [
+      { "texte": "Les cotisations sont de l'argent perdu", "frequence_estimee": 0.6, "frequence_affichee": "moyen" },
+      { "texte": "On paie seulement pour soi-même", "frequence_estimee": 0.5, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "FRATERNITE_01", "frontiere": "La fraternité est le principe. La solidarité est le mécanisme qui le rend réel." }
+    ],
+    "contre_exemples": [
+      "Une famille aide financièrement un proche",
+      "Une mutuelle rembourse ce que la Sécurité sociale ne paie pas"
+    ],
+    "cas_limites": [
+      "Une personne cotise toute sa vie sans jamais aller à l'hôpital",
+      "Un travailleur indépendant paie lui-même ses cotisations"
+    ],
+    "scenarios": ["travail", "sante"],
+    "ancrage_spatial": ["fiche_de_paie"],
+    "parcours_narratifs": { "principal": "P_IMPOT", "secondaires": ["P_TRAVAIL"] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Qu'est-ce que la solidarité collective ?",
+      "Quel organisme assure la protection sociale en France ?",
+      "À quoi servent les impôts ?",
+      "Pourquoi payer ses impôts est-il un acte solidaire ?",
+      "Que finance l'impôt ?",
+      "Que fait un salarié quand il cotise ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Une partie du salaire sert à payer l'hôpital et l'école pour tout le monde.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/fiche-paie.jpg", "lieu": "/images/lieux/hopital.jpg" }
+  },
+  {
+    "id": "REPUBLIQUE_SOCIALE_01",
+    "thematique": "valeurs",
+    "nature": "systeme_relationnel",
+    "nom_affiche": "l'égalité des chances",
+    "pourquoi_ca_existe": "Pour que l'égalité écrite dans la loi devienne réelle dans la vie.",
+    "definition_simple": "L'État aide ceux qui ont moins, pour que tous aient les mêmes chances.",
+    "definition_officielle": "Pour que cette égalité de droits soit réelle, l'État favorise l'égalité des chances et contribue à l'amélioration de la condition des plus démunis ou fragiles, en intervenant notamment dans l'éducation, le logement, l'emploi et la santé.",
+    "lexique": ["égalité des chances", "logement social", "RSA", "Sécurité sociale"],
+    "portes_entree": ["situation", "lieu", "mot_declencheur", "definition"],
+    "erreurs_typiques": [
+      { "texte": "Aider certains, c'est rompre l'égalité", "frequence_estimee": 0.6, "frequence_affichee": "moyen" },
+      { "texte": "L'école coûte cher en France", "frequence_estimee": 0.4, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "EGALITE_01", "frontiere": "L'égalité de droits est écrite dans la loi. L'égalité des chances cherche à la rendre réelle." }
+    ],
+    "contre_exemples": [
+      "Une bourse d'études attribuée selon les revenus",
+      "Un tarif de cantine calculé selon le salaire des parents"
+    ],
+    "cas_limites": [
+      "Des places réservées à certains publics dans un concours",
+      "Une aide au logement versée à une personne qui travaille"
+    ],
+    "scenarios": ["ecole", "logement", "sante"],
+    "ancrage_spatial": ["ecole_publique"],
+    "parcours_narratifs": { "principal": "P_ECOLE", "secondaires": ["P_IMPOT"] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Que signifie « République sociale » ?",
+      "Qu'est-ce que l'égalité des chances ?",
+      "Pourquoi l'État aide-t-il certaines personnes plus que d'autres ?",
+      "Quelle différence entre égalité des droits et égalité des chances ?",
+      "Dans quels domaines l'État intervient-il pour aider les plus fragiles ?",
+      "L'école est-elle gratuite en France ?",
+      "Qu'est-ce que le logement social ?",
+      "Qu'est-ce que le RSA ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "L'État aide ceux qui ont moins d'argent.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/ecole-cour.jpg", "lieu": "/images/lieux/ecole-fronton.jpg" }
+  },
+  {
+    "id": "FETE_NATIONALE_01",
+    "thematique": "valeurs",
+    "nature": "fait_arbitraire",
+    "nom_affiche": "la fête nationale",
+    "pourquoi_ca_existe": "Pour se souvenir de la prise de la Bastille et de la Fête de la Fédération.",
+    "definition_simple": "La fête nationale est le 14 juillet.",
+    "definition_officielle": "Le 14 juillet 1789, le peuple de Paris a pris la Bastille, ce qui marque le début de la Révolution française. Depuis 1880, le 14 juillet est consacré comme jour de fête nationale.",
+    "lexique": ["Bastille", "Révolution", "fête nationale"],
+    "portes_entree": ["lieu", "image", "mot_declencheur", "definition"],
+    "erreurs_typiques": [
+      { "texte": "La fête nationale est le 15 août", "frequence_estimee": 0.3, "frequence_affichee": "faible" },
+      { "texte": "Le 14 juillet célèbre la fin d'une guerre", "frequence_estimee": 0.5, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [],
+    "contre_exemples": [],
+    "cas_limites": [],
+    "scenarios": ["rue", "mairie"],
+    "ancrage_spatial": ["place_publique"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Quelle est la fête nationale française ?",
+      "Quelle est la date de la fête nationale ?",
+      "Que s'est-il passé le 14 juillet 1789 ?",
+      "Qu'est-ce que la prise de la Bastille ?",
+      "Que commémore le 14 juillet ?",
+      "Quel événement marque le début de la Révolution française ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "La fête de la France est le 14 juillet.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/14-juillet.jpg", "lieu": "/images/lieux/place-publique.jpg" }
   }
 ]

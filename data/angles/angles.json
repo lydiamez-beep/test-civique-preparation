@@ -105,5 +105,60 @@
     "reponse_incorrecte": "Oui",
     "explication_courte": "Le grand foulard se voit tout de suite. La petite croix sous le pull, non.",
     "feedback_erreur": "La règle de l'école ne porte pas sur la religion elle-même, mais sur ce qui se voit immédiatement. Un signe discret reste autorisé."
+  },
+  {
+    "id": "ANGLE_PAIE_01_SOLIDARITE",
+    "situation": "SIT_PAIE_01",
+    "notion": "SOLIDARITE_01",
+    "role": "application",
+    "question": "Où va cet argent ?",
+    "reponse_correcte": "Il paie l'hôpital, l'école et les retraites",
+    "reponse_incorrecte": "Il est gardé par l'entreprise",
+    "explication_courte": "Cet argent sert aux services que tout le monde utilise.",
+    "feedback_erreur": "L'entreprise ne garde rien. Elle transmet cet argent à des caisses qui paient les soins, les retraites et les allocations."
+  },
+  {
+    "id": "ANGLE_VOTE_02_SUFFRAGE",
+    "situation": "SIT_VOTE_02",
+    "notion": "SUFFRAGE_UNIVERSEL_01",
+    "role": "contraste",
+    "question": "Pourquoi ne votez-vous pas en septembre ?",
+    "reponse_correcte": "Ce sont des élus qui votent à votre place",
+    "reponse_incorrecte": "Cette élection est réservée aux plus de 30 ans",
+    "explication_courte": "Pour les sénateurs, ce sont les maires et les conseillers qui votent.",
+    "feedback_erreur": "L'âge n'a rien à voir. Pour certaines élections, les citoyens choisissent des personnes qui voteront ensuite pour eux."
+  },
+  {
+    "id": "ANGLE_CONVERSATION_01_CONSTITUTION",
+    "situation": "SIT_CONVERSATION_01",
+    "notion": "CONSTITUTION_01",
+    "role": "application",
+    "question": "Comment une loi votée peut-elle être annulée ?",
+    "reponse_correcte": "Elle ne respectait pas un texte plus important",
+    "reponse_incorrecte": "Les députés ont changé d'avis",
+    "explication_courte": "Un texte se trouve au-dessus des lois. Une loi qui ne le respecte pas est annulée.",
+    "feedback_erreur": "Ce n'est pas une question d'avis. Un texte fondamental fixe les règles que toutes les lois doivent respecter."
+  },
+  {
+    "id": "ANGLE_ECOLE_02_SOCIALE",
+    "situation": "SIT_ECOLE_02",
+    "notion": "REPUBLIQUE_SOCIALE_01",
+    "role": "application",
+    "question": "Qui paie l'école publique ?",
+    "reponse_correcte": "Tout le monde, par les impôts",
+    "reponse_incorrecte": "Les parents des élèves",
+    "explication_courte": "L'argent des impôts paie l'école pour toutes les familles.",
+    "feedback_erreur": "Les parents ne paient pas directement. L'argent vient des impôts que tout le monde verse, y compris les personnes sans enfants."
+  },
+  {
+    "id": "ANGLE_VILLE_01_FETE",
+    "situation": "SIT_VILLE_01",
+    "notion": "FETE_NATIONALE_01",
+    "role": "ancrage",
+    "question": "Quel jour sommes-nous ?",
+    "reponse_correcte": "Le 14 juillet",
+    "reponse_incorrecte": "Le 1er mai",
+    "explication_courte": "Drapeaux et cérémonie devant la mairie : c'est la grande fête du pays.",
+    "feedback_erreur": "Le 1er mai est aussi un jour férié, mais il n'y a ni drapeaux ni cérémonie officielle. Le 14 juillet, des feux d'artifice sont organisés le soir."
   }
 ]

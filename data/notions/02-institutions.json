@@ -41,5 +41,91 @@
     "charge_affective": "basse",
     "cadrage_factuel": "",
     "images": { "situation": "/images/situations/bureau-vote.jpg", "lieu": "/images/lieux/isoloir.jpg" }
+  },
+  {
+    "id": "SUFFRAGE_UNIVERSEL_01",
+    "thematique": "institutions",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "le suffrage universel",
+    "pourquoi_ca_existe": "Pour que tous les citoyens choisissent leurs représentants.",
+    "definition_simple": "Parfois on vote pour l'élu. Parfois on vote pour ceux qui l'éliront.",
+    "definition_officielle": "Le suffrage universel direct permet aux citoyens de voter directement pour élire leurs représentants, tandis que dans le cadre du suffrage universel indirect, des personnes élues par les citoyens élisent à leur tour les représentants.",
+    "lexique": ["suffrage", "direct", "indirect", "représentant"],
+    "portes_entree": ["situation", "contraste", "definition", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "On vote de la même façon pour toutes les élections", "frequence_estimee": 0.7, "frequence_affichee": "eleve" },
+      { "texte": "Les sénateurs sont élus par les citoyens", "frequence_estimee": 0.5, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "DROIT_VOTE_01", "frontiere": "Le droit de vote dit qui peut voter. Le suffrage universel dit comment on vote." }
+    ],
+    "contre_exemples": [
+      "Un sondage demande l'avis des habitants",
+      "Une association élit son président entre ses membres"
+    ],
+    "cas_limites": [
+      "Un référendum où le peuple décide lui-même",
+      "Une élection à deux tours"
+    ],
+    "scenarios": ["bureau_de_vote"],
+    "ancrage_spatial": ["urne"],
+    "parcours_narratifs": { "principal": "P_VOTE", "secondaires": [] },
+    "prerequis": ["DROIT_VOTE_01"],
+    "formulations_examen": [
+      "Qu'est-ce que le suffrage universel direct ?",
+      "Qu'est-ce que le suffrage universel indirect ?",
+      "Quelle différence entre suffrage direct et indirect ?",
+      "Qui élit le Président de la République ?",
+      "Le maire est-il élu au suffrage direct ?",
+      "Vous votez pour des personnes qui éliront ensuite un représentant. De quel suffrage s'agit-il ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Parfois on choisit l'élu. Parfois on choisit celui qui choisira.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/urne.jpg", "lieu": "/images/lieux/bureau-vote.jpg" }
+  },
+  {
+    "id": "CONSTITUTION_01",
+    "thematique": "institutions",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "la Constitution",
+    "pourquoi_ca_existe": "Pour dire comment le pays est organisé et dirigé.",
+    "definition_simple": "C'est le texte le plus important. Toutes les lois doivent le respecter.",
+    "definition_officielle": "La Constitution est un acte fondateur d'un État. C'est un ensemble de règles fondamentales qui définissent comment le pays est organisé et dirigé. Dans un État de droit, elle se situe tout en haut de la hiérarchie des normes.",
+    "lexique": ["Constitution", "hiérarchie des normes", "loi", "pouvoirs"],
+    "portes_entree": ["situation", "definition", "mot_declencheur", "contraste"],
+    "erreurs_typiques": [
+      { "texte": "Une loi peut changer la Constitution", "frequence_estimee": 0.6, "frequence_affichee": "moyen" },
+      { "texte": "La Constitution est un livre de lois ordinaires", "frequence_estimee": 0.4, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "LOI_01", "frontiere": "La Constitution est au-dessus. Les lois doivent la respecter." }
+    ],
+    "contre_exemples": [
+      "Le code de la route",
+      "Un règlement intérieur d'entreprise"
+    ],
+    "cas_limites": [
+      "Une loi votée par le Parlement mais annulée ensuite",
+      "Une règle européenne appliquée en France"
+    ],
+    "scenarios": ["mairie", "ecole"],
+    "ancrage_spatial": ["assemblee_nationale"],
+    "parcours_narratifs": { "principal": "P_LOI", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Qu'est-ce que la Constitution ?",
+      "De quand date la Constitution actuelle ?",
+      "Quelle est la place de la Constitution par rapport aux lois ?",
+      "Que fixe la Constitution ?",
+      "Quel texte est au sommet de la hiérarchie des normes ?",
+      "Quels pouvoirs la Constitution organise-t-elle ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Le texte le plus important du pays.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/assemblee.jpg", "lieu": "/images/lieux/assemblee-nationale.jpg" }
   }
 ]

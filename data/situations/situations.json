@@ -124,5 +124,71 @@
     ],
     "image": "/images/situations/college-entree.jpg",
     "charge_affective": "haute"
+  },
+  {
+    "id": "SIT_PAIE_01",
+    "titre": "La première fiche de paie",
+    "lieu": "travail",
+    "acteurs": ["salarie"],
+    "recit": [
+      "Vous recevez votre première fiche de paie.",
+      "Une ligne s'appelle « cotisations ».",
+      "Elle retire une partie de votre salaire."
+    ],
+    "image": "/images/situations/fiche-paie.jpg",
+    "charge_affective": "basse"
+  },
+  {
+    "id": "SIT_VOTE_02",
+    "titre": "Deux bulletins, deux élections",
+    "lieu": "bureau_de_vote",
+    "acteurs": ["electeur"],
+    "recit": [
+      "En mai, vous votez pour élire le président.",
+      "Votre voix compte directement.",
+      "En septembre, les sénateurs sont élus.",
+      "Vous n'êtes pas convoqué au bureau de vote."
+    ],
+    "image": "/images/situations/urne.jpg",
+    "charge_affective": "basse"
+  },
+  {
+    "id": "SIT_CONVERSATION_01",
+    "titre": "Une loi annulée",
+    "lieu": "domicile",
+    "acteurs": ["habitant"],
+    "recit": [
+      "Le Parlement vote une nouvelle loi.",
+      "Quelques semaines plus tard, la loi est annulée.",
+      "Elle ne sera jamais appliquée."
+    ],
+    "image": "/images/situations/assemblee.jpg",
+    "charge_affective": "basse"
+  },
+  {
+    "id": "SIT_ECOLE_02",
+    "titre": "L'inscription à l'école",
+    "lieu": "ecole",
+    "acteurs": ["parent", "voisine"],
+    "recit": [
+      "Vous inscrivez votre fille à l'école publique.",
+      "L'inscription ne coûte rien.",
+      "Une voisine vous demande qui paie les professeurs."
+    ],
+    "image": "/images/situations/ecole-cour.jpg",
+    "charge_affective": "basse"
+  },
+  {
+    "id": "SIT_VILLE_01",
+    "titre": "Les magasins fermés",
+    "lieu": "rue",
+    "acteurs": ["habitant"],
+    "recit": [
+      "Un matin d'été, tous les magasins sont fermés.",
+      "Des drapeaux sont accrochés aux fenêtres.",
+      "Une cérémonie est organisée devant la mairie."
+    ],
+    "image": "/images/situations/14-juillet.jpg",
+    "charge_affective": "basse"
   }
 ]
