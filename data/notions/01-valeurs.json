@@ -1286,5 +1286,170 @@
     "charge_affective": "haute",
     "cadrage_factuel": "Voici ce que dit la loi française. Chacun garde ses convictions personnelles.",
     "images": { "situation": "/images/situations/porte-immeuble.jpg", "lieu": "/images/lieux/immeuble.jpg" }
+  },
+  {
+    "id": "ANTISEMITISME_01",
+    "thematique": "valeurs",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "l'antisémitisme",
+    "pourquoi_ca_existe": "Pour nommer précisément une haine que l'Histoire a rendue meurtrière.",
+    "definition_simple": "L'antisémitisme est la haine dirigée contre les personnes juives.",
+    "definition_officielle": "L'antisémitisme est une forme spécifique de racisme et de haine dirigée contre les Juifs, fondée sur des préjugés, des stéréotypes et des discriminations.",
+    "lexique": ["antisémitisme", "préjugé", "stéréotype"],
+    "portes_entree": ["situation", "definition", "mot_declencheur", "contraste"],
+    "erreurs_typiques": [
+      { "texte": "C'est du racisme comme un autre, sans nom particulier", "frequence_estimee": 0.6, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "RACISME_01", "frontiere": "Le racisme vise l'origine en général. L'antisémitisme vise précisément les personnes juives et porte un nom propre dans la loi." }
+    ],
+    "contre_exemples": [
+      "Une critique d'une décision politique d'un pays",
+      "Un désaccord sur un texte religieux entre spécialistes"
+    ],
+    "cas_limites": [
+      "Un discours qui accuse un groupe de contrôler l'économie",
+      "Une caricature qui reprend un stéréotype ancien"
+    ],
+    "scenarios": ["rue", "quartier"],
+    "ancrage_spatial": ["mur_commerce"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": ["RACISME_01"],
+    "formulations_examen": [
+      "Qu'est-ce que l'antisémitisme ?",
+      "L'antisémitisme est-il une forme de racisme ?",
+      "Contre quel groupe l'antisémitisme est-il dirigé ?",
+      "Sur quoi l'antisémitisme est-il fondé ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "La haine contre les personnes juives.",
+    "charge_affective": "haute",
+    "cadrage_factuel": "Voici ce que dit la loi française.",
+    "images": { "situation": "/images/situations/mur-tag.jpg", "lieu": "/images/lieux/rue-commerce.jpg" }
+  },
+  {
+    "id": "HAINE_LGBT_01",
+    "thematique": "valeurs",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "la discrimination liée à l'orientation sexuelle",
+    "pourquoi_ca_existe": "Pour que l'orientation sexuelle ne change pas les droits d'une personne.",
+    "definition_simple": "Traiter mal une personne à cause de son orientation sexuelle est interdit.",
+    "definition_officielle": "La haine et la discrimination anti-LGBT+ désignent les attitudes hostiles à l'égard des personnes en raison de leur orientation sexuelle.",
+    "lexique": ["orientation sexuelle", "hostilité", "discrimination"],
+    "portes_entree": ["situation", "definition", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "Un propriétaire choisit librement ses locataires", "frequence_estimee": 0.6, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "DISCRIMINATION_01", "frontiere": "La discrimination est le mécanisme général. Celle-ci utilise l'orientation sexuelle comme critère." }
+    ],
+    "contre_exemples": [
+      "Un refus pour revenus insuffisants",
+      "Un refus parce que le logement est déjà loué"
+    ],
+    "cas_limites": [
+      "Un propriétaire qui invoque une préférence personnelle sans la nommer",
+      "Un club qui réserve ses activités à un public particulier"
+    ],
+    "scenarios": ["logement"],
+    "ancrage_spatial": ["agence_immobiliere"],
+    "parcours_narratifs": { "principal": "P_LOGEMENT", "secondaires": [] },
+    "prerequis": ["DISCRIMINATION_01"],
+    "formulations_examen": [
+      "Qu'est-ce que la discrimination anti-LGBT+ ?",
+      "Sur quel critère cette discrimination est-elle fondée ?",
+      "Un propriétaire peut-il refuser un couple à cause de son orientation sexuelle ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "On ne peut pas traiter mal quelqu'un à cause de qui il aime.",
+    "charge_affective": "haute",
+    "cadrage_factuel": "Voici ce que dit la loi française. Chacun garde ses convictions personnelles.",
+    "images": { "situation": "/images/situations/visite-appartement.jpg", "lieu": "/images/lieux/agence-immobiliere.jpg" }
+  },
+  {
+    "id": "BLASPHEME_01",
+    "thematique": "valeurs",
+    "nature": "norme",
+    "nom_affiche": "le blasphème",
+    "pourquoi_ca_existe": "Pour que chacun puisse discuter des idées, y compris religieuses.",
+    "definition_simple": "En France, critiquer ou se moquer d'une religion n'est pas un délit.",
+    "definition_officielle": "Le blasphème est une parole ou un discours qui insulte la divinité, la religion ou ce qui est considéré comme respectable ou sacré. En France, ce n'est pas un délit. Chacun a le droit de critiquer ou de se moquer d'une religion, et de s'exprimer librement, y compris à travers la caricature.",
+    "lexique": ["blasphème", "caricature", "délit"],
+    "portes_entree": ["situation", "contraste", "definition", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "Se moquer d'une religion est puni par la loi", "frequence_estimee": 0.7, "frequence_affichee": "eleve" }
+    ],
+    "notions_voisines": [
+      { "id": "LIMITES_EXPRESSION_01", "frontiere": "On peut dire ce qu'on veut d'une religion. On ne peut pas appeler à s'en prendre à ceux qui la pratiquent." }
+    ],
+    "contre_exemples": [
+      "Un humoriste qui plaisante sur une fête religieuse",
+      "Un article de journal qui conteste un dogme"
+    ],
+    "cas_limites": [
+      "Une caricature qui vise les croyants plutôt que la croyance",
+      "Un dessin publié pendant une période de tensions"
+    ],
+    "scenarios": ["travail"],
+    "ancrage_spatial": ["bureau"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": ["LIBERTE_CONSCIENCE_01"],
+    "formulations_examen": [
+      "Qu'est-ce que le blasphème ?",
+      "Le blasphème est-il un délit en France ?",
+      "Peut-on se moquer d'une religion en France ?",
+      "Peut-on caricaturer une religion ?",
+      "Peut-on être puni pour avoir critiqué une religion ?",
+      "Un journal publie une caricature religieuse. Est-ce autorisé ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "En France, on a le droit de critiquer une religion.",
+    "charge_affective": "haute",
+    "cadrage_factuel": "Voici ce que dit la loi française. Chacun garde ses convictions personnelles.",
+    "images": { "situation": "/images/situations/journal-bureau.jpg", "lieu": "/images/lieux/bureau.jpg" }
+  },
+  {
+    "id": "LIMITES_EXPRESSION_01",
+    "thematique": "valeurs",
+    "nature": "norme",
+    "nom_affiche": "les limites de la liberté d'expression",
+    "pourquoi_ca_existe": "Pour protéger les personnes, pas les idées.",
+    "definition_simple": "On peut tout dire des idées. On ne peut pas appeler à s'en prendre à des personnes.",
+    "definition_officielle": "La liberté d'expression connaît des limites : la diffamation, les injures publiques, l'incitation à la haine raciale, ethnique ou religieuse, l'incitation à discriminer, et la remise en cause de crimes contre l'humanité, dont le négationnisme.",
+    "lexique": ["diffamation", "injure", "incitation à la haine", "négationnisme"],
+    "portes_entree": ["situation", "contraste", "definition", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "Sur internet, on peut tout écrire", "frequence_estimee": 0.6, "frequence_affichee": "moyen" },
+      { "texte": "Critiquer une religion et attaquer les croyants, c'est pareil", "frequence_estimee": 0.6, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "BLASPHEME_01", "frontiere": "Se moquer d'une religion est légal. Appeler à s'en prendre à ceux qui la pratiquent est un délit." }
+    ],
+    "contre_exemples": [
+      "Un message qui exprime un désaccord avec une croyance",
+      "Un commentaire critique sur une décision religieuse"
+    ],
+    "cas_limites": [
+      "Un message ambigu qui vise à la fois une croyance et ses fidèles",
+      "Une plaisanterie partagée entre amis mais publique"
+    ],
+    "scenarios": ["internet", "domicile"],
+    "ancrage_spatial": ["ecran"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": ["BLASPHEME_01"],
+    "formulations_examen": [
+      "Quelles sont les limites de la liberté d'expression ?",
+      "Qu'est-ce que la diffamation ?",
+      "Qu'est-ce que le négationnisme ?",
+      "L'incitation à la haine est-elle autorisée ?",
+      "Qu'est-ce qui n'est PAS autorisé au nom de la liberté d'expression ?",
+      "Le blasphème fait-il partie des limites à la liberté d'expression ?",
+      "Quelle différence entre critiquer une religion et inciter à la haine ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "On peut critiquer une idée. On ne peut pas attaquer des personnes.",
+    "charge_affective": "haute",
+    "cadrage_factuel": "Voici ce que dit la loi française. Chacun garde ses convictions personnelles.",
+    "images": { "situation": "/images/situations/ecran-messages.jpg", "lieu": "/images/lieux/domicile.jpg" }
   }
 ]
