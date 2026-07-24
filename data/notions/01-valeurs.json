@@ -731,5 +731,408 @@
     "charge_affective": "basse",
     "cadrage_factuel": "",
     "images": { "situation": "/images/situations/constitution-texte.jpg", "lieu": "/images/lieux/mairie-facade.jpg" }
+  },
+  {
+    "id": "EGALITE_01",
+    "thematique": "valeurs",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "l'égalité",
+    "pourquoi_ca_existe": "Pour que la loi soit la même pour tout le monde.",
+    "definition_simple": "Tous les citoyens ont les mêmes droits.",
+    "definition_officielle": "Tous les citoyens ont les mêmes droits quel que soit leur sexe, leur origine, leur religion, leurs opinions ou leur orientation sexuelle.",
+    "lexique": ["égalité", "citoyen", "droits"],
+    "portes_entree": ["document", "situation", "definition", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "Les droits dépendent de la nationalité d'origine", "frequence_estimee": 0.6, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "REPUBLIQUE_SOCIALE_01", "frontiere": "L'égalité est écrite dans la loi. L'égalité des chances cherche à la rendre réelle." }
+    ],
+    "contre_exemples": [
+      "Un tarif réduit pour les étudiants",
+      "Une place réservée aux personnes handicapées"
+    ],
+    "cas_limites": [
+      "Une aide versée seulement aux familles à faibles revenus",
+      "Un concours réservé aux fonctionnaires"
+    ],
+    "scenarios": ["mairie", "prefecture"],
+    "ancrage_spatial": ["guichet_service_public"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Qu'est-ce que le principe d'égalité ?",
+      "Dans quel texte l'égalité est-elle inscrite ?",
+      "Tous les citoyens ont-ils les mêmes droits ?",
+      "L'égalité dépend-elle de la religion d'une personne ?",
+      "Quel principe garantit que tous les citoyens ont les mêmes droits ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Tout le monde a les mêmes droits.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/formulaire.jpg", "lieu": "/images/lieux/prefecture.jpg" }
+  },
+  {
+    "id": "EGALITE_FH_01",
+    "thematique": "valeurs",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "l'égalité entre les femmes et les hommes",
+    "pourquoi_ca_existe": "Pour que le sexe d'une personne ne change pas ses droits.",
+    "definition_simple": "Les femmes et les hommes ont les mêmes droits au travail, à la santé et à l'école.",
+    "definition_officielle": "L'égalité entre les femmes et les hommes est inscrite dans le préambule de la Constitution depuis 1946 et elle s'applique dans tous les domaines : travail, santé, éducation.",
+    "lexique": ["égalité", "préambule", "domaines"],
+    "portes_entree": ["situation", "contraste", "definition"],
+    "erreurs_typiques": [
+      { "texte": "L'employeur fixe librement les salaires", "frequence_estimee": 0.6, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "EGALITE_01", "frontiere": "L'égalité vaut pour tous les critères. Celle-ci porte précisément sur le sexe." }
+    ],
+    "contre_exemples": [
+      "Un salaire plus élevé pour un poste avec plus de responsabilités",
+      "Un congé maternité réservé aux femmes"
+    ],
+    "cas_limites": [
+      "Un métier physiquement exigeant réservé de fait à un sexe",
+      "Une prime d'ancienneté qui avantage les carrières sans interruption"
+    ],
+    "scenarios": ["travail"],
+    "ancrage_spatial": ["bureau"],
+    "parcours_narratifs": { "principal": "P_TRAVAIL", "secondaires": [] },
+    "prerequis": ["EGALITE_01"],
+    "formulations_examen": [
+      "Depuis quand l'égalité femmes-hommes est-elle inscrite dans la Constitution ?",
+      "Dans quels domaines l'égalité femmes-hommes s'applique-t-elle ?",
+      "Une entreprise peut-elle payer une femme moins qu'un homme pour le même travail ?",
+      "Quel texte garantit l'égalité entre les femmes et les hommes ?",
+      "Citez trois domaines où s'applique l'égalité femmes-hommes."
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Femmes et hommes ont les mêmes droits.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/bureau-salaires.jpg", "lieu": "/images/lieux/bureau.jpg" }
+  },
+  {
+    "id": "RACISME_01",
+    "thematique": "valeurs",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "le racisme",
+    "pourquoi_ca_existe": "Pour nommer et punir la haine fondée sur l'origine.",
+    "definition_simple": "Traiter mal une personne à cause de son origine ou de sa couleur de peau.",
+    "definition_officielle": "Le racisme est une discrimination fondée sur l'origine ou l'appartenance ethnique ou raciale d'une personne.",
+    "lexique": ["racisme", "origine", "appartenance ethnique"],
+    "portes_entree": ["situation", "definition", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "Ce ne sont que des mots, ce n'est pas grave", "frequence_estimee": 0.6, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "DISCRIMINATION_01", "frontiere": "La discrimination est le mécanisme général. Le racisme est celui qui utilise l'origine comme critère." }
+    ],
+    "contre_exemples": [
+      "Une plaisanterie sur une équipe de football",
+      "Un désaccord entre collègues sur un dossier"
+    ],
+    "cas_limites": [
+      "Une remarque répétée sur l'accent d'un collègue",
+      "Une préférence de recrutement justifiée par la maîtrise d'une langue"
+    ],
+    "scenarios": ["travail", "logement"],
+    "ancrage_spatial": ["bureau"],
+    "parcours_narratifs": { "principal": "P_TRAVAIL", "secondaires": [] },
+    "prerequis": ["DISCRIMINATION_01"],
+    "formulations_examen": [
+      "Qu'est-ce que le racisme ?",
+      "Sur quoi le racisme est-il fondé ?",
+      "Contre quoi l'État lutte-t-il activement ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Traiter mal quelqu'un à cause de son origine.",
+    "charge_affective": "haute",
+    "cadrage_factuel": "Voici ce que dit la loi française.",
+    "images": { "situation": "/images/situations/bureau-collegues.jpg", "lieu": "/images/lieux/bureau.jpg" }
+  },
+  {
+    "id": "SEXISME_01",
+    "thematique": "valeurs",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "le sexisme",
+    "pourquoi_ca_existe": "Pour nommer et punir le mépris fondé sur le sexe.",
+    "definition_simple": "Traiter mal une personne à cause de son sexe.",
+    "definition_officielle": "Le sexisme est un traitement dénigrant envers une autre personne en raison de son sexe.",
+    "lexique": ["sexisme", "dénigrant", "sexe"],
+    "portes_entree": ["situation", "definition", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "Certains métiers ne conviennent pas aux femmes", "frequence_estimee": 0.5, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "DISCRIMINATION_01", "frontiere": "La discrimination est le mécanisme général. Le sexisme est celui qui utilise le sexe comme critère." }
+    ],
+    "contre_exemples": [
+      "Un poste attribué à la personne la plus expérimentée",
+      "Un vestiaire séparé dans une entreprise"
+    ],
+    "cas_limites": [
+      "Une équipe composée uniquement d'hommes par habitude",
+      "Une annonce d'emploi rédigée au masculin"
+    ],
+    "scenarios": ["travail"],
+    "ancrage_spatial": ["bureau"],
+    "parcours_narratifs": { "principal": "P_TRAVAIL", "secondaires": [] },
+    "prerequis": ["DISCRIMINATION_01"],
+    "formulations_examen": [
+      "Qu'est-ce que le sexisme ?",
+      "Sur quel critère le sexisme est-il fondé ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Traiter mal quelqu'un parce que c'est une femme ou un homme.",
+    "charge_affective": "haute",
+    "cadrage_factuel": "Voici ce que dit la loi française.",
+    "images": { "situation": "/images/situations/entretien-embauche.jpg", "lieu": "/images/lieux/bureau.jpg" }
+  },
+  {
+    "id": "DECISION_EMPLOYEUR_01",
+    "thematique": "valeurs",
+    "nature": "norme",
+    "nom_affiche": "les décisions de l'employeur",
+    "pourquoi_ca_existe": "Pour que le travail soit donné selon les compétences, pas selon la personne.",
+    "definition_simple": "Un employeur décide selon le travail, jamais selon la vie privée.",
+    "definition_officielle": "Toute décision d'un employeur (embauche, promotion…) doit être fondée sur des raisons professionnelles et non personnelles.",
+    "lexique": ["embauche", "promotion", "raisons professionnelles"],
+    "portes_entree": ["situation", "contraste", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "L'employeur peut poser toutes les questions qu'il veut", "frequence_estimee": 0.7, "frequence_affichee": "eleve" }
+    ],
+    "notions_voisines": [
+      { "id": "DISCRIMINATION_01", "frontiere": "La discrimination désigne l'acte. Cette règle dit sur quoi l'employeur doit se fonder." }
+    ],
+    "contre_exemples": [
+      "Un refus pour manque d'expérience",
+      "Une promotion accordée après une formation réussie"
+    ],
+    "cas_limites": [
+      "Une question sur la disponibilité le week-end",
+      "Un refus motivé par une mauvaise entente avec l'équipe"
+    ],
+    "scenarios": ["travail"],
+    "ancrage_spatial": ["entretien_embauche"],
+    "parcours_narratifs": { "principal": "P_TRAVAIL", "secondaires": [] },
+    "prerequis": ["DISCRIMINATION_01"],
+    "formulations_examen": [
+      "Sur quoi une décision d'employeur doit-elle être fondée ?",
+      "Un employeur peut-il refuser une embauche pour un motif personnel ?",
+      "Quelles décisions d'employeur sont concernées par cette règle ?",
+      "Un employeur refuse une promotion à cause de la religion d'un salarié. Est-ce légal ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Un patron décide selon le travail, pas selon la vie privée.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/entretien-embauche.jpg", "lieu": "/images/lieux/bureau.jpg" }
+  },
+  {
+    "id": "FRATERNITE_01",
+    "thematique": "valeurs",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "la fraternité",
+    "pourquoi_ca_existe": "Pour que les citoyens puissent vivre ensemble malgré leurs différences.",
+    "definition_simple": "Voir dans l'autre une personne comme soi, même si elle est différente.",
+    "definition_officielle": "Cette fraternité repose sur la capacité à voir en l'autre un semblable malgré les différences. La fraternité républicaine est donc civique et non basée sur l'origine ou la religion.",
+    "lexique": ["fraternité", "civique", "semblable"],
+    "portes_entree": ["situation", "lieu", "contraste", "definition"],
+    "erreurs_typiques": [
+      { "texte": "La fraternité concerne surtout sa famille et sa communauté", "frequence_estimee": 0.6, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "SOLIDARITE_01", "frontiere": "La fraternité est le principe. La solidarité est le mécanisme qui le rend réel." }
+    ],
+    "contre_exemples": [
+      "Une association qui aide uniquement les gens de son pays d'origine",
+      "Un groupe d'amis qui se soutiennent entre eux"
+    ],
+    "cas_limites": [
+      "Une association religieuse qui distribue des repas à tous",
+      "Un voisin qui aide seulement les habitants de son immeuble"
+    ],
+    "scenarios": ["quartier"],
+    "ancrage_spatial": ["place_publique"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": [],
+    "formulations_examen": [
+      "Qu'est-ce que la fraternité ?",
+      "Sur quoi repose la fraternité républicaine ?",
+      "La fraternité est-elle liée à l'origine ou à la religion ?",
+      "Quel principe repose sur la capacité à voir en l'autre un semblable ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Voir dans l'autre une personne comme soi.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/repas-quartier.jpg", "lieu": "/images/lieux/place-publique.jpg" }
+  },
+  {
+    "id": "SOLIDARITE_GENERATIONS_01",
+    "thematique": "valeurs",
+    "nature": "systeme_relationnel",
+    "nom_affiche": "la solidarité entre les générations",
+    "pourquoi_ca_existe": "Pour que les personnes âgées reçoivent une retraite.",
+    "definition_simple": "Ceux qui travaillent aujourd'hui paient les retraites d'aujourd'hui.",
+    "definition_officielle": "Le principe de solidarité se traduit par le soutien entre différentes générations. En cotisant, chaque salarié contribue aux versements des retraites.",
+    "lexique": ["cotisation", "retraite", "génération"],
+    "portes_entree": ["document", "situation", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "Chacun met de côté sa propre retraite", "frequence_estimee": 0.7, "frequence_affichee": "eleve" }
+    ],
+    "notions_voisines": [
+      { "id": "SOLIDARITE_01", "frontiere": "La solidarité collective protège tout le monde. Celle-ci relie précisément les générations." }
+    ],
+    "contre_exemples": [
+      "Une épargne personnelle placée à la banque",
+      "Une assurance retraite souscrite librement"
+    ],
+    "cas_limites": [
+      "Un salarié qui quitte la France avant la retraite",
+      "Un travailleur indépendant qui cotise à sa propre caisse"
+    ],
+    "scenarios": ["travail"],
+    "ancrage_spatial": ["fiche_de_paie"],
+    "parcours_narratifs": { "principal": "P_IMPOT", "secondaires": [] },
+    "prerequis": ["SOLIDARITE_01"],
+    "formulations_examen": [
+      "Qu'est-ce que la solidarité intergénérationnelle ?",
+      "Comment les retraites sont-elles financées ?",
+      "Que fait un salarié quand il cotise ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Ceux qui travaillent paient les retraites des personnes âgées.",
+    "charge_affective": "basse",
+    "cadrage_factuel": "",
+    "images": { "situation": "/images/situations/fiche-paie.jpg", "lieu": "/images/lieux/bureau.jpg" }
+  },
+  {
+    "id": "SEPARATION_EGLISES_ETAT_01",
+    "thematique": "valeurs",
+    "nature": "norme",
+    "nom_affiche": "la séparation des Églises et de l'État",
+    "pourquoi_ca_existe": "Pour que l'argent public ne serve aucune religion.",
+    "definition_simple": "L'État ne paie pas les lieux de culte ni les personnes qui y travaillent.",
+    "definition_officielle": "L'État n'a pas le droit de financer la construction d'un édifice religieux, ni de payer un personnel religieux. Cependant, il a la possibilité de financer la restauration d'un monument religieux classé au patrimoine.",
+    "lexique": ["édifice religieux", "patrimoine", "loi de 1905"],
+    "portes_entree": ["situation", "contraste", "definition"],
+    "erreurs_typiques": [
+      { "texte": "L'État ne touche jamais à un bâtiment religieux", "frequence_estimee": 0.6, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "LAICITE_01", "frontiere": "La laïcité est le principe. Cette règle dit précisément ce que l'État peut financer ou non." }
+    ],
+    "contre_exemples": [
+      "Une association religieuse loue une salle avec son propre argent",
+      "Des fidèles financent eux-mêmes leur lieu de culte"
+    ],
+    "cas_limites": [
+      "La restauration d'une cathédrale classée monument historique",
+      "Les accords particuliers d'Alsace et de Moselle"
+    ],
+    "scenarios": ["mairie"],
+    "ancrage_spatial": ["mairie"],
+    "parcours_narratifs": { "principal": "P_CITOYEN", "secondaires": [] },
+    "prerequis": ["LAICITE_01"],
+    "formulations_examen": [
+      "Quelle loi sépare les Églises et l'État ?",
+      "En quelle année cette loi a-t-elle été votée ?",
+      "L'État peut-il financer la construction d'une église ?",
+      "L'État peut-il payer un prêtre ou un imam ?",
+      "L'État peut-il financer la restauration d'une cathédrale classée ?",
+      "Dans quelles régions existe-t-il des accords particuliers avec les religions ?",
+      "Qu'est-ce qui n'est PAS autorisé à l'État en matière religieuse ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "L'argent public ne paie pas les religions.",
+    "charge_affective": "haute",
+    "cadrage_factuel": "Voici ce que dit la loi française. Chacun garde ses convictions personnelles.",
+    "images": { "situation": "/images/situations/mairie-guichet.jpg", "lieu": "/images/lieux/mairie-facade.jpg" }
+  },
+  {
+    "id": "NEUTRALITE_ETAT_01",
+    "thematique": "valeurs",
+    "nature": "concept_a_frontieres",
+    "nom_affiche": "la neutralité de l'État",
+    "pourquoi_ca_existe": "Pour que tous les citoyens soient traités de la même façon par l'administration.",
+    "definition_simple": "L'administration traite tout le monde pareil, quelles que soient les convictions.",
+    "definition_officielle": "La République française garantit à tous les citoyens d'être traités de la même manière par l'administration et les services publics, quelles que soient leur religion ou leurs convictions.",
+    "lexique": ["neutralité", "administration", "collectivité territoriale"],
+    "portes_entree": ["situation", "lieu", "definition", "mot_declencheur"],
+    "erreurs_typiques": [
+      { "texte": "Un service public peut adapter ses règles à certaines demandes", "frequence_estimee": 0.5, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "AGENT_USAGER_01", "frontiere": "La neutralité de l'État est le principe. La règle des agents en est l'application au personnel." }
+    ],
+    "contre_exemples": [
+      "Un guichet qui adapte ses horaires aux besoins des habitants",
+      "Un service qui propose un accompagnement aux personnes âgées"
+    ],
+    "cas_limites": [
+      "Un menu sans porc proposé dans une cantine scolaire",
+      "Un jour de fermeture le dimanche dans un service public"
+    ],
+    "scenarios": ["mairie", "prefecture", "hopital"],
+    "ancrage_spatial": ["guichet_service_public"],
+    "parcours_narratifs": { "principal": "P_MAIRIE", "secondaires": [] },
+    "prerequis": ["LAICITE_01"],
+    "formulations_examen": [
+      "Qu'est-ce que la neutralité de l'État ?",
+      "Qui doit être neutre : l'État ou les personnes ?",
+      "Les services publics sont-ils neutres ?",
+      "Quel principe garantit que l'administration traite tous les citoyens de la même façon ?",
+      "Les collectivités territoriales sont-elles neutres ?",
+      "Qui est soumis à la neutralité : l'État, les collectivités territoriales, les services publics ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "L'administration traite tout le monde pareil.",
+    "charge_affective": "haute",
+    "cadrage_factuel": "Voici ce que dit la loi française. Chacun garde ses convictions personnelles.",
+    "images": { "situation": "/images/situations/guichets-mairie.jpg", "lieu": "/images/lieux/hall-mairie.jpg" }
+  },
+  {
+    "id": "NEUTRALITE_BATIMENTS_01",
+    "thematique": "valeurs",
+    "nature": "norme",
+    "nom_affiche": "la neutralité des bâtiments publics",
+    "pourquoi_ca_existe": "Pour qu'aucun usager ne se sente étranger dans un bâtiment public.",
+    "definition_simple": "Dans une mairie ou une école publique, aucun signe religieux ou politique n'est affiché.",
+    "definition_officielle": "Aucun signe ou emblème religieux, politique ou philosophique ne doit être exposé dans les bureaux, aux guichets ou encore dans les espaces communs.",
+    "lexique": ["emblème", "espaces communs", "guichet"],
+    "portes_entree": ["lieu", "situation", "contraste"],
+    "erreurs_typiques": [
+      { "texte": "Seuls les signes religieux sont concernés", "frequence_estimee": 0.6, "frequence_affichee": "moyen" }
+    ],
+    "notions_voisines": [
+      { "id": "NEUTRALITE_ETAT_01", "frontiere": "La neutralité de l'État concerne la façon de traiter les gens. Celle-ci concerne les murs du bâtiment." }
+    ],
+    "contre_exemples": [
+      "Le drapeau français accroché dans le hall",
+      "Le portrait officiel du président dans une mairie"
+    ],
+    "cas_limites": [
+      "Une crèche de Noël installée dans le hall d'une mairie",
+      "Une exposition d'art religieux dans un bâtiment public"
+    ],
+    "scenarios": ["mairie", "ecole", "hopital"],
+    "ancrage_spatial": ["hall_mairie"],
+    "parcours_narratifs": { "principal": "P_MAIRIE", "secondaires": [] },
+    "prerequis": ["NEUTRALITE_ETAT_01"],
+    "formulations_examen": [
+      "Peut-on exposer un signe religieux dans un bureau de mairie ?",
+      "Un guichet de service public peut-il afficher un symbole religieux ?",
+      "Quels espaces sont concernés par la neutralité des bâtiments publics ?",
+      "Un signe politique peut-il être affiché dans un service public ?"
+    ],
+    "niveau_langue": "A2",
+    "formulation_simplifiee": "Dans une mairie, on n'affiche ni religion ni politique.",
+    "charge_affective": "haute",
+    "cadrage_factuel": "Voici ce que dit la loi française. Chacun garde ses convictions personnelles.",
+    "images": { "situation": "/images/situations/mur-mairie.jpg", "lieu": "/images/lieux/hall-mairie.jpg" }
   }
 ]
