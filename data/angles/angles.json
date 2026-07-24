@@ -11,5 +11,44 @@
 
     "explication_courte": "L'argent public ne finance pas la construction d'un lieu de culte.",
     "feedback_erreur": "Beaucoup pensent que la mairie peut aider une association religieuse comme les autres. En réalité, l'argent public ne construit pas de lieu de culte — mais il peut restaurer un monument classé."
+  },
+  {
+    "id": "ANGLE_MAIRIE_02_AGENT",
+    "situation": "SIT_MAIRIE_02",
+    "notion": "AGENT_USAGER_01",
+    "role": "application",
+
+    "question": "Doit-elle retirer son foulard ?",
+    "reponse_correcte": "Non",
+    "reponse_incorrecte": "Oui",
+
+    "explication_courte": "La personne qui vient au guichet garde ses signes religieux.",
+    "feedback_erreur": "Beaucoup pensent que dans une mairie, personne ne peut montrer sa religion. En réalité, la règle change selon le côté du guichet. Celle qui travaille et celle qui vient ne suivent pas la même règle."
+  },
+  {
+    "id": "ANGLE_FRONTON_01_DEVISE",
+    "situation": "SIT_FRONTON_01",
+    "notion": "DEVISE_01",
+    "role": "ancrage",
+
+    "question": "Quels sont ces trois mots ?",
+    "reponse_correcte": "Liberté, Égalité, Fraternité",
+    "reponse_incorrecte": "Liberté, Égalité, Solidarité",
+
+    "explication_courte": "Ces trois mots sont gravés sur toutes les mairies de France.",
+    "feedback_erreur": "Le troisième mot est souvent confondu. Ce n'est pas « solidarité » mais « fraternité »."
+  },
+  {
+    "id": "ANGLE_VOTE_01_DROIT",
+    "situation": "SIT_VOTE_01",
+    "notion": "DROIT_VOTE_01",
+    "role": "application",
+
+    "question": "Votre voisin peut-il voter ?",
+    "reponse_correcte": "Non",
+    "reponse_incorrecte": "Oui",
+
+    "explication_courte": "Pour cette élection, il faut être français.",
+    "feedback_erreur": "Beaucoup pensent qu'il suffit de vivre en France depuis longtemps. Pour l'élection du président, il faut la nationalité française. Pour les élections de la commune, un citoyen d'un pays de l'Union européenne peut voter."
   }
 ]

@@ -13,5 +13,51 @@
 
     "image": "/images/situations/mairie-facade.jpg",
     "charge_affective": "haute"
+  },
+  {
+    "id": "SIT_MAIRIE_02",
+    "titre": "Une usagère au guichet",
+    "lieu": "mairie",
+    "acteurs": ["usagere", "agent_public"],
+
+    "recit": [
+      "Une femme arrive au guichet de la mairie.",
+      "Elle porte un foulard.",
+      "L'agente derrière le guichet n'en porte aucun.",
+      "La femme se demande si elle doit retirer le sien."
+    ],
+
+    "image": "/images/situations/mairie-guichet.jpg",
+    "charge_affective": "haute"
+  },
+  {
+    "id": "SIT_FRONTON_01",
+    "titre": "Devant la mairie",
+    "lieu": "mairie",
+    "acteurs": ["habitant"],
+
+    "recit": [
+      "Vous arrivez devant la mairie.",
+      "Trois mots sont gravés au-dessus de la porte."
+    ],
+
+    "image": "/images/situations/fronton-mairie.jpg",
+    "charge_affective": "basse"
+  },
+  {
+    "id": "SIT_VOTE_01",
+    "titre": "Un dimanche d'élection",
+    "lieu": "bureau_de_vote",
+    "acteurs": ["voisin", "habitant"],
+
+    "recit": [
+      "C'est dimanche, jour d'élection.",
+      "Votre voisin n'est pas français.",
+      "Il vit en France depuis dix ans.",
+      "Il veut voter pour le président."
+    ],
+
+    "image": "/images/situations/bureau-vote.jpg",
+    "charge_affective": "basse"
   }
 ]

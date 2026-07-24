@@ -13,12 +13,25 @@
   <script src="js/donnees.js"></script>
   <script src="js/etat.js"></script>
   <script src="js/moteur.js"></script>
+  <script src="js/ordonnanceur.js"></script>
   <script src="js/jeux/detective.js"></script>
 
   <script>
-    // Script principal — assemble le prototype sur la seule notion LAICITE_01
-    // (sections 2.1, 5.1 et 7.3 de SPECIFICATION.md, étape « Prototype sur 1 notion », section 9).
-    // N'invente aucun contenu pédagogique : tout provient des fichiers JSON de /data.
+    // Script principal — sert une session complète, item après item, jusqu'à l'écran de
+    // clôture (sections 2.1, 2.2, 5.1, 5.3 et 7.4 de SPECIFICATION.md). N'invente aucun
+    // contenu pédagogique : tout provient des fichiers JSON de /data.
+    // Modulation par nature (2.2) : seules les boucles 1 (ancrage) et 2 (sens) sont codées
+    // ici ; aucune boucle 3 (discrimination) n'existe encore, donc ce cycle ne suppose
+    // jamais l'existence de contre_exemples ni de notions_voisines — propres aux
+    // "concept_a_frontieres" et absents d'un "fait_arbitraire" comme DEVISE_01.
+
+    // État de la session en cours — un seul module de script, donc des variables de portée
+    // fichier plutôt qu'un objet passé de fonction en fonction à chaque écran.
+    let session = [];
+    let indexItemCourant = 0;
+    let situationsSession = [];
+    let notionsReussies = new Set(); // ids des notions répondues correctement pendant la session
+    let debutSession = null;
 
     /**
      * Construit un séparateur visuel entre deux blocs de l'écran de révélation.
@@ -164,15 +177,13 @@
       defOfficielle.textContent = notion.definition_officielle;
       conteneur.appendChild(defOfficielle);
 
-      // Bouton de fin du prototype (une seule notion : pas d'écran de clôture complet ici)
+      // Fin de l'item : passe au suivant, ou à l'écran de clôture si c'était le dernier
+      // (section 5.3 : la session ne s'arrête jamais sur un simple "Terminer" intermédiaire).
       const bouton = document.createElement("button");
       bouton.type = "button";
-      bouton.className = "revelation-bouton-terminer";
-      bouton.textContent = "Terminer";
-      bouton.addEventListener("click", () => {
-        conteneur.textContent = "";
-        conteneur.className = "";
-      });
+      bouton.className = "revelation-bouton-continuer";
+      bouton.textContent = "Continuer";
+      bouton.addEventListener("click", () => passerAuItemSuivant(conteneur));
       conteneur.appendChild(bouton);
     }
 
@@ -194,6 +205,13 @@
         onReponse: (porte, reussite, tempsEnMs) => {
           // temps_reponse_moyen (section 1.6) est exprimé en secondes.
           enregistrerReponse(notion.id, porte, reussite, tempsEnMs / 1000);
+
+          // Acquis de la session (section 7.4) : une notion répondue correctement au moins
+          // une fois, indépendamment du critère d'acquisition pluri-jours de la section 1.7.
+          if (reussite) {
+            notionsReussies.add(notion.id);
+          }
+
           afficherRetour(notion, angle, reussite, conteneur);
         },
         onIncomprehension: () => {
@@ -204,28 +222,26 @@
     }
 
     /**
-     * Point d'entrée : charge les données, sélectionne le trio du prototype
-     * (LAICITE_01 / SIT_MAIRIE_01 / ANGLE_MAIRIE_01_LAICITE) et démarre l'écran adapté.
+     * Sert l'item courant de la session : cadrage si besoin, puis micro-jeu Détective.
+     * Quand tous les items ont été servis, affiche l'écran de clôture (section 7.4).
+     * @param {HTMLElement} conteneur
      */
-    async function demarrerPrototype() {
-      const conteneur = document.getElementById("conteneur-ecrans");
-
-      // 1. Chargement des données (aucun contenu écrit en dur)
-      const notions = await chargerNotions("01-valeurs.json");
-      const situations = await chargerSituations();
-      const angles = await chargerAngles();
-
-      // 2. Sélection du trio fixe du prototype (section 9 : une seule notion à la fois)
-      const notion = trouverNotion(notions, "LAICITE_01");
-      const situation = situations.find((s) => s.id === "SIT_MAIRIE_01");
-      const angle = angles.find((a) => a.id === "ANGLE_MAIRIE_01_LAICITE");
-
-      if (!notion || !situation || !angle) {
-        console.error("Données introuvables pour le prototype LAICITE_01 / SIT_MAIRIE_01 / ANGLE_MAIRIE_01_LAICITE.");
+    function servirItemCourant(conteneur) {
+      if (indexItemCourant >= session.length) {
+        afficherCloture(conteneur);
         return;
       }
 
-      // 3. Cadrage factuel avant tout si la situation a une charge affective haute (R5, section 4.1)
+      const { notion, angle } = session[indexItemCourant];
+      const situation = situationsSession.find((s) => s.id === angle.situation);
+
+      if (!situation) {
+        console.error(`Situation introuvable pour l'angle "${angle.id}" (id "${angle.situation}") : item écarté.`);
+        passerAuItemSuivant(conteneur);
+        return;
+      }
+
+      // Cadrage factuel avant tout si la charge affective de la situation est haute (R5, section 4.1)
       if (situation.charge_affective === "haute") {
         afficherCadrage(notion, conteneur, () => demarrerDetective(notion, situation, angle, conteneur));
       } else {
@@ -233,7 +249,100 @@
       }
     }
 
-    demarrerPrototype();
+    /**
+     * Avance à l'item suivant de la session et le sert (ou affiche la clôture s'il n'y en a plus).
+     * @param {HTMLElement} conteneur
+     */
+    function passerAuItemSuivant(conteneur) {
+      indexItemCourant += 1;
+      servirItemCourant(conteneur);
+    }
+
+    /**
+     * Affiche l'écran de clôture (section 7.4) : durée de la session et liste nommée des
+     * acquis, un acquis par notion répondue correctement au moins une fois. Formellement
+     * interdits ici (sections 5.6 et 7.4) : score, pourcentage, félicitation, badge.
+     * @param {HTMLElement} conteneur
+     */
+    function afficherCloture(conteneur) {
+      conteneur.textContent = "";
+      conteneur.className = "ecran-microjeu ecran-cloture";
+
+      const dureeEnMinutes = Math.round((Date.now() - debutSession) / 60000);
+
+      const titre = document.createElement("p");
+      titre.className = "cloture-titre";
+      titre.textContent = `Session terminée · ${dureeEnMinutes} minute${dureeEnMinutes === 1 ? "" : "s"}`;
+      conteneur.appendChild(titre);
+
+      const sousTitre = document.createElement("p");
+      sousTitre.className = "cloture-sous-titre";
+      sousTitre.textContent = "Aujourd'hui, vous savez :";
+      conteneur.appendChild(sousTitre);
+
+      const listeAcquis = document.createElement("ul");
+      listeAcquis.className = "cloture-liste-acquis";
+
+      // Un acquis par notion réussie, dans l'ordre de la session, sans doublon
+      // (une même notion peut porter plusieurs items dans une session future).
+      const nomsAffichesVus = new Set();
+      session
+        .map((item) => item.notion)
+        .filter((notion) => notionsReussies.has(notion.id))
+        .forEach((notion) => {
+          if (nomsAffichesVus.has(notion.nom_affiche)) return;
+          nomsAffichesVus.add(notion.nom_affiche);
+
+          const ligne = document.createElement("li");
+          ligne.className = "cloture-acquis-item";
+          ligne.textContent = `✓ ${notion.nom_affiche}`;
+          listeAcquis.appendChild(ligne);
+        });
+
+      conteneur.appendChild(listeAcquis);
+
+      const bouton = document.createElement("button");
+      bouton.type = "button";
+      bouton.className = "cloture-bouton-terminer";
+      bouton.textContent = "Terminer";
+      bouton.addEventListener("click", () => {
+        conteneur.textContent = "";
+        conteneur.className = "";
+      });
+      conteneur.appendChild(bouton);
+    }
+
+    /**
+     * Point d'entrée : charge les données de deux thématiques, construit la session
+     * ordonnée (règles O3, O1, O4 — section 4.2) et sert son premier item.
+     */
+    async function demarrerSession() {
+      const conteneur = document.getElementById("conteneur-ecrans");
+
+      // 1. Chargement des données et fusion des notions des deux thématiques disponibles
+      //    (aucun contenu écrit en dur : tout provient des fichiers JSON de /data)
+      const notionsValeurs = await chargerNotions("01-valeurs.json");
+      const notionsInstitutions = await chargerNotions("02-institutions.json");
+      const notions = notionsValeurs.concat(notionsInstitutions);
+      situationsSession = await chargerSituations();
+      const angles = await chargerAngles();
+
+      // 2. Construction de la session ordonnée
+      session = construireSession(notions, angles, {});
+      indexItemCourant = 0;
+      notionsReussies = new Set();
+      debutSession = Date.now();
+
+      if (session.length === 0) {
+        console.error("Aucun item servable pour cette session (voir les règles O3/O4 de l'ordonnanceur).");
+        return;
+      }
+
+      // 3. Sert le premier item
+      servirItemCourant(conteneur);
+    }
+
+    demarrerSession();
   </script>
 </body>
 </html>
