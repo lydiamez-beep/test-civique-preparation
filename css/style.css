@@ -476,6 +476,12 @@ button {
   color: var(--couleur-acquis);
 }
 
+.cloture-rappel-consolidation {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--couleur-texte-attenue);
+}
+
 .cloture-bouton-terminer {
   width: 100%;
   min-height: 48px;
@@ -550,6 +556,12 @@ button {
   font-weight: 400;
   color: var(--couleur-fond);
   opacity: 0.85;
+}
+
+.accueil-mention-toutes-vues {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--couleur-texte-attenue);
 }
 
 /* --------------------------------------------------------------------------

@@ -138,6 +138,17 @@ function calculerEtat(etatNotion, nature) {
 }
 
 /**
+ * Indique si une notion a déjà été présentée au moins une fois aujourd'hui (même jour
+ * calendaire que l'horodatage produit par horodatageActuel, donc comparé en UTC).
+ * @param {Object} etatNotion - L'EtatNotion à évaluer.
+ * @returns {boolean} Vrai si un moment de moments_espaces tombe aujourd'hui.
+ */
+function estVueAujourdHui(etatNotion) {
+  const aujourdHui = horodatageActuel().slice(0, 10);
+  return etatNotion.moments_espaces.some((moment) => moment.slice(0, 10) === aujourdHui);
+}
+
+/**
  * Retourne les identifiants des notions dont la date de prochaine révision est déjà passée.
  * @returns {Array<string>} Les identifiants des notions à revoir.
  */

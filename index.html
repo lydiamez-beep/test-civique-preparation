@@ -272,16 +272,20 @@
       conteneur.textContent = "";
       conteneur.className = "ecran-microjeu ecran-cloture";
 
-      const dureeEnMinutes = Math.round((Date.now() - debutSession) / 60000);
+      const dureeEnMs = Date.now() - debutSession;
+      const dureeTexte =
+        dureeEnMs < 60000
+          ? "moins d'une minute"
+          : `${Math.round(dureeEnMs / 60000)} ${accorder(Math.round(dureeEnMs / 60000), "minute", "minutes")}`;
 
       const titre = document.createElement("p");
       titre.className = "cloture-titre";
-      titre.textContent = `Session terminée · ${dureeEnMinutes} minute${dureeEnMinutes === 1 ? "" : "s"}`;
+      titre.textContent = `Session terminée · ${dureeTexte}`;
       conteneur.appendChild(titre);
 
       const sousTitre = document.createElement("p");
       sousTitre.className = "cloture-sous-titre";
-      sousTitre.textContent = "Aujourd'hui, vous savez :";
+      sousTitre.textContent = "Aujourd'hui, vous avez travaillé :";
       conteneur.appendChild(sousTitre);
 
       const listeAcquis = document.createElement("ul");
@@ -304,6 +308,11 @@
         });
 
       conteneur.appendChild(listeAcquis);
+
+      const rappelConsolidation = document.createElement("p");
+      rappelConsolidation.className = "cloture-rappel-consolidation";
+      rappelConsolidation.textContent = "Ces notions reviendront pour être consolidées.";
+      conteneur.appendChild(rappelConsolidation);
 
       const bouton = document.createElement("button");
       bouton.type = "button";
@@ -396,6 +405,18 @@
     }
 
     /**
+     * Indique si toutes les notions disponibles (section 1.1) ont déjà été présentées au
+     * moins une fois aujourd'hui (via estVueAujourdHui de /js/etat.js). Le bouton principal
+     * de l'écran d'accueil reste cliquable dans ce cas (section 5.6) : aucun verrou, juste
+     * une mention informative sous le bouton.
+     * @param {Array<Object>} notions
+     * @returns {boolean}
+     */
+    function toutesNotionsVuesAujourdHui(notions) {
+      return notions.every((notion) => estVueAujourdHui(chargerEtat(notion.id)));
+    }
+
+    /**
      * Regroupe les notions par thématique, dans leur ordre d'apparition dans les données,
      * et calcule pour chacune son nombre de notions à l'état "solide" (critère
      * d'acquisition de la section 1.7, via calculerEtat de /js/etat.js).
@@ -466,6 +487,13 @@
 
       boutonPrincipal.addEventListener("click", () => demarrerSession(conteneur));
       conteneur.appendChild(boutonPrincipal);
+
+      if (toutesNotionsVuesAujourdHui(notions)) {
+        const mentionToutesVues = document.createElement("p");
+        mentionToutesVues.className = "accueil-mention-toutes-vues";
+        mentionToutesVues.textContent = "Vous avez vu toutes les notions disponibles aujourd'hui.";
+        conteneur.appendChild(mentionToutesVues);
+      }
 
       const separateur = document.createElement("hr");
       separateur.className = "accueil-separateur";

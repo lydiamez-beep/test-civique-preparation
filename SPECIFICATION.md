@@ -823,12 +823,15 @@ Ordre d'affichage **strict** :
 │                                       │
 │  Session terminée · 4 minutes         │
 │                                       │
-│  Aujourd'hui, vous savez :            │
+│  Aujourd'hui, vous avez travaillé :   │
 │                                       │
 │  ✓ Reconnaître la laïcité             │
 │    dans une situation                 │
 │  ✓ La distinguer de la liberté        │
 │    religieuse                         │
+│                                       │
+│  Ces notions reviendront pour être    │
+│  consolidées.                         │
 │                                       │
 │  Prochaine réactivation : dans 3 jours│
 │                                       │
